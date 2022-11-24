@@ -1,0 +1,15 @@
+C:\Users\b15-16m\source\repos\Examen_1_Lucas_Sanz\Examen_1_Lucas_Sanz\obj\Debug\net6.0\Examen_1_Lucas_Sanz.csproj.AssemblyReference.cache
+C:\Users\b15-16m\source\repos\Examen_1_Lucas_Sanz\Examen_1_Lucas_Sanz\obj\Debug\net6.0\Examen_1_Lucas_Sanz.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\b15-16m\source\repos\Examen_1_Lucas_Sanz\Examen_1_Lucas_Sanz\obj\Debug\net6.0\Examen_1_Lucas_Sanz.AssemblyInfoInputs.cache
+C:\Users\b15-16m\source\repos\Examen_1_Lucas_Sanz\Examen_1_Lucas_Sanz\obj\Debug\net6.0\Examen_1_Lucas_Sanz.AssemblyInfo.cs
+C:\Users\b15-16m\source\repos\Examen_1_Lucas_Sanz\Examen_1_Lucas_Sanz\obj\Debug\net6.0\Examen_1_Lucas_Sanz.csproj.CoreCompileInputs.cache
+C:\Users\b15-16m\source\repos\Examen_1_Lucas_Sanz\Examen_1_Lucas_Sanz\bin\Debug\net6.0\Examen_1_Lucas_Sanz.exe
+C:\Users\b15-16m\source\repos\Examen_1_Lucas_Sanz\Examen_1_Lucas_Sanz\bin\Debug\net6.0\Examen_1_Lucas_Sanz.deps.json
+C:\Users\b15-16m\source\repos\Examen_1_Lucas_Sanz\Examen_1_Lucas_Sanz\bin\Debug\net6.0\Examen_1_Lucas_Sanz.runtimeconfig.json
+C:\Users\b15-16m\source\repos\Examen_1_Lucas_Sanz\Examen_1_Lucas_Sanz\bin\Debug\net6.0\Examen_1_Lucas_Sanz.dll
+C:\Users\b15-16m\source\repos\Examen_1_Lucas_Sanz\Examen_1_Lucas_Sanz\bin\Debug\net6.0\Examen_1_Lucas_Sanz.pdb
+C:\Users\b15-16m\source\repos\Examen_1_Lucas_Sanz\Examen_1_Lucas_Sanz\obj\Debug\net6.0\Examen_1_Lucas_Sanz.dll
+C:\Users\b15-16m\source\repos\Examen_1_Lucas_Sanz\Examen_1_Lucas_Sanz\obj\Debug\net6.0\refint\Examen_1_Lucas_Sanz.dll
+C:\Users\b15-16m\source\repos\Examen_1_Lucas_Sanz\Examen_1_Lucas_Sanz\obj\Debug\net6.0\Examen_1_Lucas_Sanz.pdb
+C:\Users\b15-16m\source\repos\Examen_1_Lucas_Sanz\Examen_1_Lucas_Sanz\obj\Debug\net6.0\Examen_1_Lucas_Sanz.genruntimeconfig.cache
+C:\Users\b15-16m\source\repos\Examen_1_Lucas_Sanz\Examen_1_Lucas_Sanz\obj\Debug\net6.0\ref\Examen_1_Lucas_Sanz.dll
