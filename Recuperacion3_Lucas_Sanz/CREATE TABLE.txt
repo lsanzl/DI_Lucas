@@ -1,0 +1,7 @@
+CREATE TABLE `recuperacion_db`.`empleadosfaunia` (
+  `id` INT NOT NULL,
+  `nif` VARCHAR(45) NULL,
+  `nombre` VARCHAR(45) NULL,
+  `apellidos` VARCHAR(45) NULL,
+  `edad` INT(3) NULL,
+  PRIMARY KEY (`id`));
