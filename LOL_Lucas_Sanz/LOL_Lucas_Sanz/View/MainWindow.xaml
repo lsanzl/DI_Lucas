@@ -1,0 +1,13 @@
+﻿<Window x:Class="LOL_Lucas_Sanz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LOL_Lucas_Sanz"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Name="btn_start" Content="START" HorizontalAlignment="Center" VerticalAlignment="Center" Height="59" Width="95" Click="click_btn_start"/>
+
+    </Grid>
+</Window>
