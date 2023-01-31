@@ -25,16 +25,19 @@ namespace LOL_Lucas_Sanz
     {
         public Country country;
         public Team team;
+        public Player player;
         public MainWindow()
         {
             InitializeComponent();
             country = new Country();
             team = new Team();
+            player = new Player();
         }
         private void click_btn_start(object sender, RoutedEventArgs e)
         {
             country.insertCountries();
             team.insertTeams();
+            player.insertPlayers();
         }
     }
 }
