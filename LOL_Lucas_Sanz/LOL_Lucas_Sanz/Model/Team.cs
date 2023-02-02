@@ -25,9 +25,12 @@ namespace LOL_Lucas_Sanz.Model
             this.manage_team = new ManageTeam();
         }
         public void insertTeams()
+        { 
+            this.manage_team.insertTeams();
+        }
+        public void deleteTeams()
         {
             this.manage_team.deleteAll();
-            this.manage_team.insertTeams();
         }
 
     }

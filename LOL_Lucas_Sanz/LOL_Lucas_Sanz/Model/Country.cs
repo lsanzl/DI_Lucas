@@ -26,8 +26,11 @@ namespace LOL_Lucas_Sanz.Model
         }
         public void insertCountries()
         {
-            this.manage_country.deleteAll();
             this.manage_country.insertCountry();
+        }
+        public void deleteCountries()
+        {
+            this.manage_country.deleteAll();
         }
     }
     

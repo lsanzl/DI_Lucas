@@ -39,13 +39,16 @@ namespace LOL_Lucas_Sanz.Model
             this.surname = surname_list[r.Next(surname_list.Length)];
             this.role = role_list[r.Next(role_list.Length)];
             this.type = type;
-            this.idCountry = r.Next(country_list.Length);
+            this.idCountry = r.Next(1,country_list.Length);
             this.manage_player = new ManagePlayer();
         }
         public void insertPlayers()
+        { 
+            this.manage_player.insertPlayer();
+        }
+        public void deletePlayers()
         {
-            manage_player.deleteAll();
-            manage_player.insertPlayer();
+            this.manage_player.deleteAll();
         }
     }
 }

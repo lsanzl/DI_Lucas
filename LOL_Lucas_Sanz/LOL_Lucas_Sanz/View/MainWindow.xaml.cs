@@ -35,9 +35,16 @@ namespace LOL_Lucas_Sanz
         }
         private void click_btn_start(object sender, RoutedEventArgs e)
         {
+            deleteAllTables();
             country.insertCountries();
             team.insertTeams();
             player.insertPlayers();
+        }
+        private void deleteAllTables()
+        {
+            player.deletePlayers();
+            team.deleteTeams();
+            country.deleteCountries();
         }
     }
 }
