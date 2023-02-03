@@ -1536,9 +1536,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\b15-16m\\source\\repos\\LOL_Lucas_Sanz\\LOL_Lucas_Sanz\\LOL_Lucas_Sanz.csproj",
-      "projectName": "LOL_Lucas_Sanz",
-      "projectPath": "C:\\Users\\b15-16m\\source\\repos\\LOL_Lucas_Sanz\\LOL_Lucas_Sanz\\LOL_Lucas_Sanz.csproj",
+      "projectUniqueName": "C:\\Users\\b15-16m\\source\\repos\\LOL_Lucas_Sanz\\LOL_Lucas_Sanz\\P2Hito2_Lucas_Sanz.csproj",
+      "projectName": "P2Hito2_Lucas_Sanz",
+      "projectPath": "C:\\Users\\b15-16m\\source\\repos\\LOL_Lucas_Sanz\\LOL_Lucas_Sanz\\P2Hito2_Lucas_Sanz.csproj",
       "packagesPath": "C:\\Users\\b15-16m\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\b15-16m\\source\\repos\\LOL_Lucas_Sanz\\LOL_Lucas_Sanz\\obj\\",
       "projectStyle": "PackageReference",

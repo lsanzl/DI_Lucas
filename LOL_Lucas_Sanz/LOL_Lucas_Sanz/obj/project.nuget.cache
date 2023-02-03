@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "scVVG0cw0dZWz97iyf8+Pquo7vJr6iN0qi4SlYCqjUIdObQbBsz5EMhXz3TE1Oj74pqU7lfED9VOzsYa+hZWJQ==",
+  "dgSpecHash": "ZdgRU1VnZaC7Rh7AgGDn/m4FBU9gy4ZpoNjm7dkEDhEohf6CjwfFttjs+ttIXKH62+5k9PvlU8eIwTxZfn/pXQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\b15-16m\\source\\repos\\LOL_Lucas_Sanz\\LOL_Lucas_Sanz\\LOL_Lucas_Sanz.csproj",
+  "projectFilePath": "C:\\Users\\b15-16m\\source\\repos\\LOL_Lucas_Sanz\\LOL_Lucas_Sanz\\P2Hito2_Lucas_Sanz.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\b15-16m\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\b15-16m\\.nuget\\packages\\k4os.compression.lz4\\1.2.6\\k4os.compression.lz4.1.2.6.nupkg.sha512",
