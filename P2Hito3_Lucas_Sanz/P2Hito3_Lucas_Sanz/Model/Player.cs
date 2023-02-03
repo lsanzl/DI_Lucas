@@ -40,6 +40,18 @@ namespace P2Hito3_Lucas_Sanz.Model
             this.idCountry = r.Next(1, country_list.Length);
             this.manage_player = new ManagePlayer();
         }
+        public Player(string nickName,string name, string surname,string role, string type, int idTeam, int idCountry)
+        {
+            this.nickName = nickName;
+            this.idTeam = idTeam;
+            this.name = name;
+            this.surname = surname;
+            this.role = role;
+            this.type = type;
+            this.idCountry = idCountry;
+            this.idTeam = idTeam;
+            this.manage_player = new ManagePlayer();
+        }
         public void insertPlayers()
         {
             this.manage_player.insertPlayer();
@@ -47,6 +59,10 @@ namespace P2Hito3_Lucas_Sanz.Model
         public void deletePlayers()
         {
             this.manage_player.deleteAll();
+        }
+        public List<Player> readPlayers()
+        {
+            return this.manage_player.getPlayers();
         }
     }
 }

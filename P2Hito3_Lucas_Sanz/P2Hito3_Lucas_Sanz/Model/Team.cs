@@ -32,5 +32,9 @@ namespace P2Hito3_Lucas_Sanz.Model
         {
             this.manage_team.deleteAll();
         }
+        public List<Team> readTeams()
+        {
+            return this.manage_team.getTeams();
+        }
     }
 }

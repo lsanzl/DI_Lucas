@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using P2Hito3_Lucas_Sanz.Model;
 
 namespace P2Hito3_Lucas_Sanz.Persistence.Manage
 {
@@ -16,6 +17,26 @@ namespace P2Hito3_Lucas_Sanz.Persistence.Manage
                 Team t = new Team("Team" + i, "/images/default.jpg");
                 DBBroker.getAgent().executeSQL($"insert into leagueoflegends.team (name, imageSrc) values('{t.name}', '{t.imageSrc}');");
             }
+        }
+        public List<Team> getTeams()
+        {
+            List<Team> team_list = new List<Team>();
+            List<Object> team_object = new List<Object>();
+
+            string name_p;
+            string img_p;
+
+            team_object = DBBroker.getAgent().readSQL("select * from leagueoflegends.team;");
+            foreach (List<Team> objP in team_object)
+            {
+                name_p = objP[1].ToString();
+                img_p = objP[2].ToString();
+
+                Team t = new Team(name_p, img_p);
+
+                team_list.Add(t);
+            }
+            return team_list;
         }
         public void deleteAll()
         {

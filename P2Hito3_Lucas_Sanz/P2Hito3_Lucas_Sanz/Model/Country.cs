@@ -31,5 +31,9 @@ namespace P2Hito3_Lucas_Sanz.Model
         {
             this.manage_country.deleteAll();
         }
+        public List<Country> readCountries()
+        {
+            return this.manage_country.getCountrys();
+        }
     }
 }
