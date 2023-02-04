@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace P2Hito3_Lucas_Sanz.Model
 {
@@ -63,6 +64,47 @@ namespace P2Hito3_Lucas_Sanz.Model
         public List<Player> readPlayers()
         {
             return this.manage_player.getPlayers();
+        }
+        public Boolean readPlayers(int team)
+        {
+            int contador_players = 0;
+            List<Player> checkList = this.manage_player.getPlayers();
+            foreach (Player p in checkList)
+            {
+                if (p.idTeam == team)
+                {
+                    contador_players++;
+                }
+            }
+            if (contador_players < 12)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public Boolean readPlayers(String role, int idTeam)
+        {
+            int contador_roles = 0;
+            List<Player> checkList = this.manage_player.getPlayers();
+
+            foreach (Player p in checkList)
+            {
+                if (p.type.Equals("Headline") && p.idTeam == idTeam)
+                {
+                    contador_roles++;
+                }
+            }
+            if (contador_roles < 5)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

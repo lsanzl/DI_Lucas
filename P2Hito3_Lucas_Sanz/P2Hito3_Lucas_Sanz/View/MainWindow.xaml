@@ -20,11 +20,11 @@
                     <TextBox Name="txt_nickname" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="94,18,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
                     <TextBox Name="txt_name" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="94,68,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
                     <TextBox Name="txt_surname" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="94,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                    <ComboBox Name="cb_role" HorizontalAlignment="Left" Margin="94,166,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cb_role_SelectionChanged"/>
+                    <ComboBox Name="cb_role" HorizontalAlignment="Left" Margin="94,166,0,0" VerticalAlignment="Top" Width="120"/>
                     <ComboBox Name="cb_type" HorizontalAlignment="Left" Margin="94,216,0,0" VerticalAlignment="Top" Width="120"/>
                     <ComboBox Name="cb_team" HorizontalAlignment="Left" Margin="93,266,0,0" VerticalAlignment="Top" Width="120"/>
                     <ComboBox Name="cb_country" HorizontalAlignment="Left" Margin="93,316,0,0" VerticalAlignment="Top" Width="120"/>
-                    <DataGrid Name="dg_players" Margin="233,0,0,0" SelectionChanged="DataGrid_SelectionChanged" IsReadOnly="True">
+                    <DataGrid Name="dg_players" Margin="233,0,0,0" IsReadOnly="True">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="NICKNAME" Binding="{Binding nickName}" Width="*"/>
                             <DataGridTextColumn Header="TEAM" Binding="{Binding idTeam}" Width="*"/>
@@ -32,21 +32,21 @@
                             <DataGridTextColumn Header="TYPE" Binding="{Binding type}" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Button Name="btn_add" Content="ADD" HorizontalAlignment="Left" Margin="10,355,0,0" VerticalAlignment="Top" Height="40" Width="90"/>
+                    <Button Name="btn_add" Content="ADD" HorizontalAlignment="Left" Margin="10,355,0,0" VerticalAlignment="Top" Height="40" Width="90" Click="click_btn_add"/>
                     <Button Name="btn_delete" Content="DELETE" HorizontalAlignment="Left" Margin="123,355,0,0" VerticalAlignment="Top" Height="40" Width="90"/>
                 </Grid>
             </TabItem>
             <TabItem Header="TEAM" Height="40" Margin="-2,0,0,0" VerticalAlignment="Bottom">
                 <Grid Background="#FFE5E5E5">
-                    <Label x:Name="lbl_tname" Content="NICKNAME" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="46,54,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lbl_tname" Content="TEAM NAME" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="46,54,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lbl_image" Content="ICON" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="72,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.524,-1.444"/>
                     <TextBox x:Name="txt_tname" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="138,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
                     <TextBox x:Name="txt_timage" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="138,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
                     <Button x:Name="btn_tadd" Content="ADD" HorizontalAlignment="Left" Margin="55,153,0,0" VerticalAlignment="Top" Height="40" Width="90"/>
                     <Button x:Name="btn_tdelete" Content="DELETE" HorizontalAlignment="Left" Margin="168,153,0,0" VerticalAlignment="Top" Height="40" Width="90"/>
-                    <DataGrid x:Name="dg_teams" Margin="290,54,216,54" SelectionChanged="DataGrid_SelectionChanged" IsReadOnly="True">
+                    <DataGrid x:Name="dg_teams" Margin="290,54,216,54" IsReadOnly="True">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="NICKNAME" Binding="{Binding name}" Width="*"/>
+                            <DataGridTextColumn Header="TEAM NAME" Binding="{Binding name}" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>

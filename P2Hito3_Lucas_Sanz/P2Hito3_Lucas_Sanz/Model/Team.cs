@@ -24,6 +24,13 @@ namespace P2Hito3_Lucas_Sanz.Model
             this.imageSrc = imageSrc;
             this.manage_team = new ManageTeam();
         }
+        public Team(int idTeam, string name, string imageSrc)
+        {
+            this.idTeam = idTeam;
+            this.name = name;
+            this.imageSrc = imageSrc;
+            this.manage_team = new ManageTeam();
+        }
         public void insertTeams()
         {
             this.manage_team.insertTeams();

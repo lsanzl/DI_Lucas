@@ -10,7 +10,7 @@ namespace P2Hito3_Lucas_Sanz.Persistence
     {
         private static DBBroker instance;
         private static MySql.Data.MySqlClient.MySqlConnection connection;//
-        private const String driver = "server=localhost;database=leagueoflegends;uid=root;pwd=patata";
+        private const String driver = "server=localhost;database=leagueoflegends;uid=root;pwd=lusalo96";
 
         private DBBroker()
         {

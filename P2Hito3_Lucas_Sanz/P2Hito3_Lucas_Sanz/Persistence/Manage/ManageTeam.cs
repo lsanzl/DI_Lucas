@@ -23,16 +23,18 @@ namespace P2Hito3_Lucas_Sanz.Persistence.Manage
             List<Team> team_list = new List<Team>();
             List<Object> team_object = new List<Object>();
 
+            int idTeam_p;
             string name_p;
             string img_p;
 
             team_object = DBBroker.getAgent().readSQL("select * from leagueoflegends.team;");
-            foreach (List<Team> objP in team_object)
+            foreach (List<Object> objP in team_object)
             {
+                idTeam_p = Convert.ToInt32(objP[0]);
                 name_p = objP[1].ToString();
                 img_p = objP[2].ToString();
 
-                Team t = new Team(name_p, img_p);
+                Team t = new Team(idTeam_p, name_p, img_p);
 
                 team_list.Add(t);
             }
