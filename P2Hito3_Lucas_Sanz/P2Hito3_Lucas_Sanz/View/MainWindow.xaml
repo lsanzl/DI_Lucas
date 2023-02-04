@@ -33,7 +33,7 @@
                         </DataGrid.Columns>
                     </DataGrid>
                     <Button Name="btn_add" Content="ADD" HorizontalAlignment="Left" Margin="10,355,0,0" VerticalAlignment="Top" Height="40" Width="90" Click="click_btn_add"/>
-                    <Button Name="btn_delete" Content="DELETE" HorizontalAlignment="Left" Margin="123,355,0,0" VerticalAlignment="Top" Height="40" Width="90"/>
+                    <Button Name="btn_delete" Content="DELETE" HorizontalAlignment="Left" Margin="123,355,0,0" VerticalAlignment="Top" Height="40" Width="90" Click="click_btn_delete"/>
                 </Grid>
             </TabItem>
             <TabItem Header="TEAM" Height="40" Margin="-2,0,0,0" VerticalAlignment="Bottom">
@@ -42,8 +42,8 @@
                     <Label x:Name="lbl_image" Content="ICON" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="72,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.524,-1.444"/>
                     <TextBox x:Name="txt_tname" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="138,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
                     <TextBox x:Name="txt_timage" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="138,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                    <Button x:Name="btn_tadd" Content="ADD" HorizontalAlignment="Left" Margin="55,153,0,0" VerticalAlignment="Top" Height="40" Width="90"/>
-                    <Button x:Name="btn_tdelete" Content="DELETE" HorizontalAlignment="Left" Margin="168,153,0,0" VerticalAlignment="Top" Height="40" Width="90"/>
+                    <Button x:Name="btn_tadd" Content="ADD" HorizontalAlignment="Left" Margin="55,153,0,0" VerticalAlignment="Top" Height="40" Width="90" Click="click_btn_tadd"/>
+                    <Button x:Name="btn_tdelete" Content="DELETE" HorizontalAlignment="Left" Margin="168,153,0,0" VerticalAlignment="Top" Height="40" Width="90" Click="click_btn_tdelete"/>
                     <DataGrid x:Name="dg_teams" Margin="290,54,216,54" IsReadOnly="True">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="TEAM NAME" Binding="{Binding name}" Width="*"/>

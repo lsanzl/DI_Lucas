@@ -23,14 +23,6 @@ namespace P2Hito3_Lucas_Sanz.Model
             this.name = name;
             this.manage_country = new ManageCountry();
         }
-        public void insertCountries()
-        {
-            this.manage_country.insertCountry();
-        }
-        public void deleteCountries()
-        {
-            this.manage_country.deleteAll();
-        }
         public List<Country> readCountries()
         {
             return this.manage_country.getCountrys();

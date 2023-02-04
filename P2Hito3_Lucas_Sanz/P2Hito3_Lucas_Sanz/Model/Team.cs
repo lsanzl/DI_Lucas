@@ -31,17 +31,18 @@ namespace P2Hito3_Lucas_Sanz.Model
             this.imageSrc = imageSrc;
             this.manage_team = new ManageTeam();
         }
-        public void insertTeams()
-        {
-            this.manage_team.insertTeams();
-        }
-        public void deleteTeams()
-        {
-            this.manage_team.deleteAll();
-        }
         public List<Team> readTeams()
         {
             return this.manage_team.getTeams();
         }
+        public void insertTeam()
+        {
+            this.manage_team.insertTeam(this);
+        }
+        public void deleteTeam()
+        {
+            this.manage_team.deleteTeam(this);
+        }
+        
     }
 }

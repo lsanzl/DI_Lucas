@@ -1,4 +1,5 @@
-﻿using P2Hito3_Lucas_Sanz.Persistence.Manage;
+﻿using P2Hito3_Lucas_Sanz.Persistence;
+using P2Hito3_Lucas_Sanz.Persistence.Manage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,13 +54,9 @@ namespace P2Hito3_Lucas_Sanz.Model
             this.idTeam = idTeam;
             this.manage_player = new ManagePlayer();
         }
-        public void insertPlayers()
+        public void insertPlayer()
         {
-            this.manage_player.insertPlayer();
-        }
-        public void deletePlayers()
-        {
-            this.manage_player.deleteAll();
+            this.manage_player.insertPlayer(this);
         }
         public List<Player> readPlayers()
         {
@@ -105,6 +102,10 @@ namespace P2Hito3_Lucas_Sanz.Model
             {
                 return false;
             }
+        }
+        public void deletePlayer()
+        {
+            this.manage_player.deletePlayer(this);
         }
     }
 }

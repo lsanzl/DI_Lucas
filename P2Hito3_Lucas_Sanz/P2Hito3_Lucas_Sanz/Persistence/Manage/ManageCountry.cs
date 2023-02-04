@@ -10,21 +10,6 @@ namespace P2Hito3_Lucas_Sanz.Persistence.Manage
 {
     public class ManageCountry
     {
-        public void insertCountry()
-        {
-            DBBroker.getAgent().executeSQL("alter table leagueoflegends.country AUTO_INCREMENT = 1;");
-            string[] name_list = { "Spain", "Italy", "France", "Portugal", "Denmark", "Deutschland", "UK", "Greece", "Netherlands", "Scotland" };
-
-            foreach (string name in name_list)
-            {
-                Country c = new Country(name);
-                DBBroker.getAgent().executeSQL($"insert into leagueoflegends.country (name) values('{c.name}');");
-            }
-        }
-        public void deleteAll()
-        {
-            DBBroker.getAgent().executeSQL("delete from leagueoflegends.country");
-        }
         public List<Country> getCountrys()
         {
             List<Country> country_list = new List<Country>();
