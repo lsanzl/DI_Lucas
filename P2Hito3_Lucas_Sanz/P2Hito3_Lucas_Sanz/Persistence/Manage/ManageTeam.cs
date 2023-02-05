@@ -10,6 +10,10 @@ namespace P2Hito3_Lucas_Sanz.Persistence.Manage
 {
     public class ManageTeam
     {
+        /// <summary>
+        /// Method to request list of teams from DB
+        /// </summary>
+        /// <returns> List of teams objects </returns>
         public List<Team> getTeams()
         {
             List<Team> team_list = new List<Team>();
@@ -32,14 +36,24 @@ namespace P2Hito3_Lucas_Sanz.Persistence.Manage
             }
             return team_list;
         }
+        /// <summary>
+        /// Method to insert a team object in DB
+        /// </summary>
+        /// <param name="team_insert"> Team to insert </param>
         public void insertTeam(Team team_insert)
         {
             DBBroker.getAgent().executeSQL("alter table leagueoflegends.player AUTO_INCREMENT = 1;");
             DBBroker.getAgent().executeSQL($"insert into leagueoflegends.team (name, imageSrc) values ('{team_insert.name}', '{team_insert.imageSrc}');");
         }
+        /// <summary>
+        /// Method to delete a selected team from DB
+        /// </summary>
+        /// <param name="team"> Team to delete </param>
         public void deleteTeam(Team team)
         {
+            DBBroker.getAgent().executeSQL("SET FOREIGN_KEY_CHECKS=0;");
             DBBroker.getAgent().executeSQL($"delete from leagueoflegends.team where name='{team.name}';");
+            DBBroker.getAgent().executeSQL("SET FOREIGN_KEY_CHECKS=1;");
         }
     }
 }

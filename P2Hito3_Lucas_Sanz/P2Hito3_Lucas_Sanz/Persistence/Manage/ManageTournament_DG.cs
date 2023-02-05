@@ -10,6 +10,10 @@ namespace P2Hito3_Lucas_Sanz.Persistence.Manage
     public class ManageTournament_DG
     {
         Country country_aux = new Country();
+        /// <summary>
+        /// Method to get objects and convert to data grid tournaments
+        /// </summary>
+        /// <returns> List of tournaments to show in data grid </returns>
         public List<Tournament_DG> getTournaments()
         {
             List<Tournament_DG> tournament_list = new List<Tournament_DG>();
@@ -32,11 +36,15 @@ namespace P2Hito3_Lucas_Sanz.Persistence.Manage
             }
             return tournament_list;
         }
-        public void deleteTournament(Tournament_DG tournament)
+        /// <summary>
+        /// Method to delete a tournament from DB
+        /// </summary>
+        /// <param name="tourDG"> Tournament to delete </param>
+        public void deleteTournament_DG(Tournament_DG tourDG)
         {
-            DBBroker.getAgent().executeSQL($"delete from leagueoflegends.play where idMatch=(select idMatch from leagueoflegends.match where idTournament=(select idTournament from leagueoflegends.tournament where name='{tournament.name}'));");
-            DBBroker.getAgent().executeSQL($"delete from leagueoflegends.match where idTournament=(select idTournament from leagueoflegends.tournament where name='{tournament.name}'");
-            DBBroker.getAgent().executeSQL($"delete from leagueoflegends.tournament where name='{tournament.name}';");
+            DBBroker.getAgent().executeSQL("SET FOREIGN_KEY_CHECKS=0;");
+            DBBroker.getAgent().executeSQL($"delete from leagueoflegends.tournament where name='{tourDG.name}';");
+            DBBroker.getAgent().executeSQL("SET FOREIGN_KEY_CHECKS=1;");
         }
     }
 }

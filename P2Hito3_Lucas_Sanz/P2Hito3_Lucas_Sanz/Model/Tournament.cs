@@ -25,6 +25,12 @@ namespace P2Hito3_Lucas_Sanz.Model
         public int idCountry { get; set; }
         public int year { get; set; }
         public ManageTournament manage_tournament { get; set; }
+        /// <summary>
+        /// Constructor to build tournaments
+        /// </summary>
+        /// <param name="name"> Tournament's name </param>
+        /// <param name="year"> Tournament's year </param>
+        /// <param name="idCountry"> Tournament's country </param>
         public Tournament(string name, string year, int idCountry)
         {
             this.manage_tournament = new ManageTournament();
@@ -33,10 +39,16 @@ namespace P2Hito3_Lucas_Sanz.Model
             this.name = name;
             this.idCountry = idCountry;
         }
+        /// <summary>
+        /// Calls manage to insert tournaments
+        /// </summary>
         public void insertTournament()
         {
             this.manage_tournament.insertTournament(this);
         }
+        /// <summary>
+        /// Method to initialize the tournament
+        /// </summary>
         public void startTournament()
         {
             tournamentList();
@@ -45,7 +57,9 @@ namespace P2Hito3_Lucas_Sanz.Model
             playRound(teams_semifinales, teams_final, 2);
             playFinal(teams_final);
         }
-
+        /// <summary>
+        /// Method to random select 16 teams which play the tournament
+        /// </summary>
         public void tournamentList()
         {
             List<int> num_used = new List<int>();
@@ -68,6 +82,12 @@ namespace P2Hito3_Lucas_Sanz.Model
             }
             MessageBox.Show(traza_inicial);
         }
+        /// <summary>
+        /// Method that makes random matchs
+        /// </summary>
+        /// <param name="ronda_actual"> List of teams of actual round </param>
+        /// <param name="ronda_next"> List of teams of next round </param>
+        /// <param name="round"> Number of actual round </param>
         public void playRound(List<Team> ronda_actual, List<Team> ronda_next, int round)
         {
             int rand = 0;
@@ -102,6 +122,10 @@ namespace P2Hito3_Lucas_Sanz.Model
             MessageBox.Show(traza_juegan);
             MessageBox.Show(traza_ganadores);
         }
+        /// <summary>
+        /// Method to play final round
+        /// </summary>
+        /// <param name="ronda_final"> List of two teams which play final round </param>
         public void playFinal(List<Team> ronda_final)
         {
             string traza_juegan = $"Juegan ronda final:\n";
@@ -123,6 +147,13 @@ namespace P2Hito3_Lucas_Sanz.Model
             MessageBox.Show(traza_juegan);
             MessageBox.Show(traza_ganadores);
         }
+        /// <summary>
+        /// Method which generates random kills, assists and the winner
+        /// </summary>
+        /// <param name="team1"> Team 1 of match </param>
+        /// <param name="team2"> Team 2 of match </param>
+        /// <param name="round"> Number of round </param>
+        /// <returns> True if team 1 wins the match </returns>
         public Boolean playMatch(Team team1, Team team2, int round)
         {
             int kills1 = 0;
@@ -140,6 +171,12 @@ namespace P2Hito3_Lucas_Sanz.Model
 
             return this.manage_tournament.insertMatch(team1, team2, kills1, assists1, kills2, assists2, round, this);
         }
+        /// <summary>
+        /// Method which checks that teams don't repeat in list match
+        /// </summary>
+        /// <param name="int_check"> List of IDs already introduced </param>
+        /// <param name="num_check"> Num to check </param>
+        /// <returns> True if number doesn't exist in list </returns>
         public Boolean checkRepeat(List<int> int_check, int num_check)
         {
             foreach (int i in int_check)

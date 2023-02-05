@@ -13,11 +13,19 @@ namespace P2Hito3_Lucas_Sanz.Persistence.Manage
     public class ManagePlayer
     {
         public Random r = new Random();
+        /// <summary>
+        /// Method to insert players in DB
+        /// </summary>
+        /// <param name="p"> Player to insert </param>
         public void insertPlayer(Player p)
         {
             DBBroker.getAgent().executeSQL("alter table leagueoflegends.player AUTO_INCREMENT = 1;");
             DBBroker.getAgent().executeSQL($"insert into leagueoflegends.player (nickName, name, surname, role, type, idTeam, idCountry) values ('{p.nickName}', '{p.name}', '{p.surname}', '{p.role}', '{p.type}', '{p.idTeam}', '{p.idCountry}');");
         }
+        /// <summary>
+        /// Method to request list of players from DB
+        /// </summary>
+        /// <returns> List of players objects </returns>
         public List<Player> getPlayers()
         {
             List<Player> player_list = new List<Player>();
@@ -48,6 +56,10 @@ namespace P2Hito3_Lucas_Sanz.Persistence.Manage
             }
             return player_list;
         }
+        /// <summary>
+        /// Method to delete a selected player from DB
+        /// </summary>
+        /// <param name="player"> Player to delete </param>
         public void deletePlayer(Player player)
         {
             DBBroker.getAgent().executeSQL($"delete from leagueoflegends.player where nickName='{player.nickName}';");

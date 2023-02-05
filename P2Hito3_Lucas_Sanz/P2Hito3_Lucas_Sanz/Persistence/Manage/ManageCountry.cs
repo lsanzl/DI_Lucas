@@ -10,6 +10,10 @@ namespace P2Hito3_Lucas_Sanz.Persistence.Manage
 {
     public class ManageCountry
     {
+        /// <summary>
+        /// Method to get objects from DB and convert to country object
+        /// </summary>
+        /// <returns> List of countries  </returns>
         public List<Country> getCountrys()
         {
             List<Country> country_list = new List<Country>();

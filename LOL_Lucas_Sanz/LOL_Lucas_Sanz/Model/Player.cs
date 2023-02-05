@@ -26,11 +26,19 @@ namespace LOL_Lucas_Sanz.Model
         public string[] surname_list = { "Diaz", "García", "Moreno", "Aranda", "Marcos", "Ruedas", "Orovio", "Esquinas", "Ruiz", "Sanz", "Medina", "Morales", "Sancho", "Solera"};
         public string[] role_list = { "top", "support", "mid", "jungle", "adc" };
         public string[] country_list = { "Spain", "Italy", "France", "Portugal", "Denmark", "Deutschland", "UK", "Greece", "Netherlands", "Scotland" };
-
+        /// <summary>
+        /// Void constructor to Player object
+        /// </summary>
         public Player()
         {
             this.manage_player = new ManagePlayer();
         }
+        /// <summary>
+        /// Constructor to build personalized Player objects, the rest of params are randomized from lists
+        /// </summary>
+        /// <param name="nickName"> Player's nickName </param>
+        /// <param name="type"> Player's type: headline or reserve </param>
+        /// <param name="idTeam"> Player's team assigned</param>
         public Player(string nickName, string type, int idTeam)
         {
             this.nickName = nickName;
@@ -42,10 +50,16 @@ namespace LOL_Lucas_Sanz.Model
             this.idCountry = r.Next(1,country_list.Length);
             this.manage_player = new ManagePlayer();
         }
+        /// <summary>
+        /// Calls to manage method to insert players
+        /// </summary>
         public void insertPlayers()
         { 
             this.manage_player.insertPlayer();
         }
+        /// <summary>
+        /// Calls to manage method to delete each player
+        /// </summary>
         public void deletePlayers()
         {
             this.manage_player.deleteAll();

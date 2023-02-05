@@ -26,6 +26,9 @@ namespace LOL_Lucas_Sanz
         public Country country;
         public Team team;
         public Player player;
+        /// <summary>
+        /// Main method
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -33,6 +36,11 @@ namespace LOL_Lucas_Sanz
             team = new Team();
             player = new Player();
         }
+        /// <summary>
+        /// Method to initialize each insert methods to DB
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void click_btn_start(object sender, RoutedEventArgs e)
         {
             deleteAllTables();
@@ -40,6 +48,9 @@ namespace LOL_Lucas_Sanz
             team.insertTeams();
             player.insertPlayers();
         }
+        /// <summary>
+        /// Method to initialize delete methods from DB
+        /// </summary>
         private void deleteAllTables()
         {
             player.deletePlayers();
