@@ -24,6 +24,8 @@ namespace P2Hito3_Lucas_Sanz
         Country country;
         Team team;
         Player player;
+        Tournament tournament;
+        Tournament_DG tournament_dg;
         String[] roles = {"Top", "Support", "Mid", "Jungle", "ADC"};
         String[] types = { "Headline", "Reserve" };
         public MainWindow()
@@ -32,6 +34,8 @@ namespace P2Hito3_Lucas_Sanz
             country = new Country();
             team = new Team();
             player = new Player();
+            tournament_dg = new Tournament_DG();
+            btn_start.IsEnabled = false;
             initializeCB();
         }
         private void initializeCB()
@@ -39,10 +43,12 @@ namespace P2Hito3_Lucas_Sanz
             List<Country> countries = country.readCountries();
             List<Player> players = player.readPlayers();
             List<Team> teams = team.readTeams();
+            List<Tournament_DG> tournaments_dg = tournament_dg.readTournaments();
 
             foreach (Country c in countries)
             {
                 cb_country.Items.Add(c.name);
+                cb_tourcountry.Items.Add(c.name);
             }
             foreach (Player p in players)
             {
@@ -52,6 +58,10 @@ namespace P2Hito3_Lucas_Sanz
             {
                 dg_teams.Items.Add(t);
                 cb_team.Items.Add(t.idTeam);
+            }
+            foreach (Tournament_DG to in tournaments_dg)
+            {
+                dg_tournaments.Items.Add(to);
             }
             cb_role.ItemsSource = roles;
             cb_type.ItemsSource = types;
@@ -74,6 +84,14 @@ namespace P2Hito3_Lucas_Sanz
             dg_teams.Items.Clear();
             txt_tname.Clear();
             txt_timage.Clear();
+        }
+        private void clearFieldsTournament()
+        {
+            txt_year.Clear();
+            txt_name_tournament.Clear();
+            cb_tourcountry.Items.Clear();
+            dg_tournaments.Items.Clear();
+            dg_tournaments.SelectedIndex= -1;
         }
 
         private void click_btn_add(object sender, RoutedEventArgs e)
@@ -150,6 +168,40 @@ namespace P2Hito3_Lucas_Sanz
             team_delete.deleteTeam();
             MessageBox.Show("Equipo eliminado");
             clearFieldsTeam();
+            initializeCB();
+        }
+
+        private void click_btn_create(object sender, RoutedEventArgs e)
+        {
+            if (txt_year.Text.Equals("") || txt_name_tournament.Text.Equals("") || cb_tourcountry.SelectedIndex == -1)
+            {
+                MessageBox.Show("Introduzca todos los datos del torneo");
+                return;
+            }
+            tournament = new Tournament(txt_name_tournament.Text, txt_year.Text, cb_tourcountry.SelectedIndex);
+            tournament.insertTournament();
+            btn_start.IsEnabled = true;
+            initializeCB();
+        }
+
+        private void click_btn_start(object sender, RoutedEventArgs e)
+        {
+            tournament.startTournament();
+            clearFieldsTournament();
+            initializeCB();
+        }
+
+        private void click_btn_delete_tournament(object sender, RoutedEventArgs e)
+        {
+            if (dg_tournaments.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione un torneo a eliminar");
+                return;
+            }
+            Tournament_DG tournament_delete = (Tournament_DG)dg_tournaments.SelectedValue;
+            tournament_delete.deleteTournament();
+            MessageBox.Show("Torneo eliminado");
+            clearFieldsTournament();
             initializeCB();
         }
     }

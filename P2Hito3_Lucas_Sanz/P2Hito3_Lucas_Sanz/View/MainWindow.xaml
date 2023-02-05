@@ -57,14 +57,18 @@
                     <DataGrid Name="dg_tournaments" Margin="10,71,382,41">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="NAME" Binding="{Binding name}" Width="*"/>
-                            <DataGridTextColumn Header="LOCATION" Binding="{Binding idCountry}" Width="*"/>
+                            <DataGridTextColumn Header="LOCATION" Binding="{Binding location}" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Label Name="lbl_year" Content="Year" HorizontalAlignment="Left" Margin="426,126,0,0" VerticalAlignment="Top"/>
+                    <Label Name="lbl_year" Content="Year" HorizontalAlignment="Left" Margin="426,104,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="txt_name_tournament" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="465,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
                     <Label Name="lbl_location" Content="Location" HorizontalAlignment="Left" Margin="403,188,0,0" VerticalAlignment="Top"/>
-                    <TextBox Name="txt_year" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="465,130,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                    <TextBox Name="txt_location" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="465,192,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                    <Button Name="btn_create" Content="CREATE" HorizontalAlignment="Left" Margin="495,246,0,0" VerticalAlignment="Top" Height="40" Width="90"/>
+                    <TextBox Name="txt_year" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="465,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <Button Name="btn_create" Content="CREATE" HorizontalAlignment="Left" Margin="386,240,0,0" VerticalAlignment="Top" Height="40" Width="90" Click="click_btn_create"/>
+                    <ComboBox Name="cb_tourcountry" HorizontalAlignment="Left" Margin="465,190,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Button Name="btn_start" Content="START" HorizontalAlignment="Left" Margin="495,240,0,0" VerticalAlignment="Top" Height="40" Width="90" Click="click_btn_start"/>
+                    <Label Name="lbl_name_tournament" Content="Name" HorizontalAlignment="Left" Margin="416,145,0,0" VerticalAlignment="Top"/>
+                    <Button Name="btn_delete_tournament" Content="DELETE" HorizontalAlignment="Left" Margin="386,305,0,0" VerticalAlignment="Top" Height="40" Width="90" Click="click_btn_delete_tournament"/>
                 </Grid>
             </TabItem>
         </TabControl>
