@@ -4,30 +4,27 @@ using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using P2Hito3_Lucas_Sanz.Model;
 
 namespace P2Hito3_Lucas_Sanz.Persistence.Manage
 {
     public class ManageCountry
     {
-        public void insertCountry()
+        /// <summary>
+        /// Method to get objects from DB and convert to country object
+        /// </summary>
+        /// <returns> List of countries  </returns>
+        public List<Country> getCountrys()
         {
-            DBBroker.getAgent().executeSQL("alter table leagueoflegends.country AUTO_INCREMENT = 1;");
-            string[] name_list = { "Spain", "Italy", "France", "Portugal", "Denmark", "Deutschland", "UK", "Greece", "Netherlands", "Scotland" };
-
-            foreach (string name in name_list)
+            List<Country> country_list = new List<Country>();
+            List<Object> country_object = new List<Object>();
+            country_object = DBBroker.getAgent().readSQL("select * from leagueoflegends.country;");
+            foreach(List<Object> objC in country_object)
             {
-                Country c = new Country(name);
-                DBBroker.getAgent().executeSQL($"insert into leagueoflegends.country (name) values('{c.name}');");
+                Country c = new Country(objC[1].ToString());
+                country_list.Add(c);
             }
-        }
-        public void deleteAll()
-        {
-            DBBroker.getAgent().executeSQL("delete from leagueoflegends.country");
-        }
-        public List<String> getNameCountrys()
-        {
-            List<Country> country_names = new List<Country>();
-
+            return country_list;
         }
     }
 }

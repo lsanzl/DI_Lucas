@@ -13,6 +13,9 @@ namespace LOL_Lucas_Sanz.Persistence.Manage
     public class ManagePlayer
     {
         public Random r = new Random();
+        /// <summary>
+        /// Execute a sql query to insert a determinated list of players with most of params randomized in DB
+        /// </summary>
         public void insertPlayer()
         {
             DBBroker.getAgent().executeSQL("alter table leagueoflegends.player AUTO_INCREMENT = 1;");
@@ -25,12 +28,12 @@ namespace LOL_Lucas_Sanz.Persistence.Manage
 
             for (int i=1; i<= 50; i++)
             {
-                string type = "holder";
+                string type = "Headline";
                 for (int j=1; j<=r.Next(12,16); j++)
                 {
                     if (j > 5)
                     {
-                        type = "substitute";
+                        type = "Reserve";
                     }
                     Player p = new Player("nick" + idPlayer, type, i);
                 
@@ -39,9 +42,14 @@ namespace LOL_Lucas_Sanz.Persistence.Manage
                 }
             }
         }
+        /// <summary>
+        /// Execute a sql query to delete each of players from DB
+        /// </summary>
         public void deleteAll()
         {
+            DBBroker.getAgent().executeSQL("SET FOREIGN_KEY_CHECKS=0;");
             DBBroker.getAgent().executeSQL("delete from leagueoflegends.player;");
+            DBBroker.getAgent().executeSQL("SET FOREIGN_KEY_CHECKS=1;");
         }
     }
 }

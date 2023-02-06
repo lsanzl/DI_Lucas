@@ -24,7 +24,7 @@
                     <ComboBox Name="cb_type" HorizontalAlignment="Left" Margin="94,216,0,0" VerticalAlignment="Top" Width="120"/>
                     <ComboBox Name="cb_team" HorizontalAlignment="Left" Margin="93,266,0,0" VerticalAlignment="Top" Width="120"/>
                     <ComboBox Name="cb_country" HorizontalAlignment="Left" Margin="93,316,0,0" VerticalAlignment="Top" Width="120"/>
-                    <DataGrid Name="dg_players" Margin="233,0,0,0" SelectionChanged="DataGrid_SelectionChanged" IsReadOnly="True">
+                    <DataGrid Name="dg_players" Margin="233,0,0,0" IsReadOnly="True">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="NICKNAME" Binding="{Binding nickName}" Width="*"/>
                             <DataGridTextColumn Header="TEAM" Binding="{Binding idTeam}" Width="*"/>
@@ -32,27 +32,44 @@
                             <DataGridTextColumn Header="TYPE" Binding="{Binding type}" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Button Name="btn_add" Content="ADD" HorizontalAlignment="Left" Margin="10,355,0,0" VerticalAlignment="Top" Height="40" Width="90"/>
-                    <Button Name="btn_delete" Content="DELETE" HorizontalAlignment="Left" Margin="123,355,0,0" VerticalAlignment="Top" Height="40" Width="90"/>
+                    <Button Name="btn_add" Content="ADD" HorizontalAlignment="Left" Margin="10,355,0,0" VerticalAlignment="Top" Height="40" Width="90" Click="click_btn_add"/>
+                    <Button Name="btn_delete" Content="DELETE" HorizontalAlignment="Left" Margin="123,355,0,0" VerticalAlignment="Top" Height="40" Width="90" Click="click_btn_delete"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="TEAM" Height="40">
+            <TabItem Header="TEAM" Height="40" Margin="-2,0,0,0" VerticalAlignment="Bottom">
                 <Grid Background="#FFE5E5E5">
-                    <Label x:Name="lbl_tname" Content="NICKNAME" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="46,54,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lbl_tname" Content="TEAM NAME" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="46,54,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lbl_image" Content="ICON" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="72,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.524,-1.444"/>
                     <TextBox x:Name="txt_tname" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="138,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                    <TextBox x:Name="txt_image" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="138,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                    <Button x:Name="btn_tadd" Content="ADD" HorizontalAlignment="Left" Margin="55,153,0,0" VerticalAlignment="Top" Height="40" Width="90"/>
-                    <Button x:Name="btn_tdelete" Content="DELETE" HorizontalAlignment="Left" Margin="168,153,0,0" VerticalAlignment="Top" Height="40" Width="90"/>
-                    <DataGrid x:Name="dg_teams" Margin="290,54,216,54" SelectionChanged="DataGrid_SelectionChanged" IsReadOnly="True">
+                    <TextBox x:Name="txt_timage" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="138,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="btn_tadd" Content="ADD" HorizontalAlignment="Left" Margin="55,153,0,0" VerticalAlignment="Top" Height="40" Width="90" Click="click_btn_tadd"/>
+                    <Button x:Name="btn_tdelete" Content="DELETE" HorizontalAlignment="Left" Margin="168,153,0,0" VerticalAlignment="Top" Height="40" Width="90" Click="click_btn_tdelete"/>
+                    <DataGrid x:Name="dg_teams" Margin="290,54,216,54" IsReadOnly="True">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="NICKNAME" Binding="{Binding name}" Width="*"/>
+                            <DataGridTextColumn Header="TEAM NAME" Binding="{Binding name}" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
             </TabItem>
             <TabItem Header="SIMULATION" Height="40">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Label Name="lbl_tournaments" Content="TOURNAMENTS" HorizontalAlignment="Left" Margin="73,24,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="24"/>
+                    <DataGrid Name="dg_tournaments" Margin="10,71,382,41">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="NAME" Binding="{Binding name}" Width="*"/>
+                            <DataGridTextColumn Header="LOCATION" Binding="{Binding location}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Label Name="lbl_year" Content="Year" HorizontalAlignment="Left" Margin="426,104,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="txt_name_tournament" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="465,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <Label Name="lbl_location" Content="Location" HorizontalAlignment="Left" Margin="403,188,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="txt_year" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="465,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <Button Name="btn_create" Content="CREATE" HorizontalAlignment="Left" Margin="386,240,0,0" VerticalAlignment="Top" Height="40" Width="90" Click="click_btn_create"/>
+                    <ComboBox Name="cb_tourcountry" HorizontalAlignment="Left" Margin="465,190,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Button Name="btn_start" Content="START" HorizontalAlignment="Left" Margin="495,240,0,0" VerticalAlignment="Top" Height="40" Width="90" Click="click_btn_start"/>
+                    <Label Name="lbl_name_tournament" Content="Name" HorizontalAlignment="Left" Margin="416,145,0,0" VerticalAlignment="Top"/>
+                    <Button Name="btn_delete_tournament" Content="DELETE" HorizontalAlignment="Left" Margin="386,302,0,0" VerticalAlignment="Top" Height="40" Width="90" Click="click_btn_delete_tournament"/>
+                </Grid>
             </TabItem>
         </TabControl>
 
