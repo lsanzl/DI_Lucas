@@ -24,6 +24,10 @@ namespace HP_Lucas_Sanz.Model
             this.avatar = avatar;
             this.manage_player = new ManagePlayer();
         }
+        public Player()
+        {
+            this.manage_player = new ManagePlayer();
+        }
         public void insertAbility()
         {
             this.manage_player.insertPlayer(this);
@@ -32,7 +36,7 @@ namespace HP_Lucas_Sanz.Model
         {
             this.manage_player.deletePlayer(this);
         }
-        public List<Player> getAbilities()
+        public List<Player> getPlayers()
         {
             return this.manage_player.getPlayers();
         }

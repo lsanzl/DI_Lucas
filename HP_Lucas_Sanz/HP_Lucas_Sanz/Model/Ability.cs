@@ -23,6 +23,10 @@ namespace HP_Lucas_Sanz.Model
             this.money = money;
             this.manage_ability = new ManageAbility();
         }
+        public Ability()
+        {
+            this.manage_ability = new ManageAbility();
+        }
         public void insertAbility()
         {
             this.manage_ability.insertAbility(this);

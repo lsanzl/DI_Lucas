@@ -10,25 +10,25 @@
         <TabControl TabStripPlacement="Left">
             <TabItem Header="CONFIG" Height="40" Width="80">
                 <Grid Background="#FFE5E5E5">
-                    <Label x:Name="lbl_dimensions" Content="GAME BOARD DIMENSIONS" HorizontalAlignment="Left" Margin="96,65,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-                    <Label x:Name="lbl_money" Content="INITIAL PLAYERS MONEY" HorizontalAlignment="Left" Margin="114,135,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-                    <Label x:Name="lbl_target" Content="TARGET CELL" HorizontalAlignment="Left" Margin="177,0,0,0" VerticalAlignment="Center" FontWeight="Bold"/>
-                    <TextBox x:Name="txt_rows" HorizontalAlignment="Left" Height="25" Margin="287,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75"/>
-                    <TextBox x:Name="txt_columns" HorizontalAlignment="Left" Height="25" Margin="390,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75"/>
-                    <TextBox x:Name="txt_money" HorizontalAlignment="Left" Height="26" Margin="287,135,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75"/>
-                    <TextBox x:Name="txt_rowtarget" HorizontalAlignment="Left" Height="25" Margin="287,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="75"/>
-                    <TextBox x:Name="txt_columntarget" HorizontalAlignment="Left" Height="25" Margin="390,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="75"/>
-                    <Label x:Name="lbl_x" Content="X" HorizontalAlignment="Left" Margin="367,64,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-                    <Label x:Name="lbl_x_2" Content="X" HorizontalAlignment="Left" Margin="367,0,0,0" VerticalAlignment="Center" FontWeight="Bold"/>
-                    <Button x:Name="btn_save_settings" Content="SAVE SETTINGS" HorizontalAlignment="Left" Margin="365,270,0,0" VerticalAlignment="Top" Height="30" Width="100"/>
+                    <Label Name="lbl_dimensions" Content="GAME BOARD DIMENSIONS" HorizontalAlignment="Left" Margin="96,65,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label Name="lbl_money" Content="INITIAL PLAYERS MONEY" HorizontalAlignment="Left" Margin="114,135,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label Name="lbl_target" Content="TARGET CELL" HorizontalAlignment="Left" Margin="177,0,0,0" VerticalAlignment="Center" FontWeight="Bold"/>
+                    <TextBox Name="txt_rows" HorizontalAlignment="Left" Height="25" Margin="287,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75"/>
+                    <TextBox Name="txt_columns" HorizontalAlignment="Left" Height="25" Margin="390,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75"/>
+                    <TextBox Name="txt_money" HorizontalAlignment="Left" Height="26" Margin="287,135,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75"/>
+                    <TextBox Name="txt_rowtarget" HorizontalAlignment="Left" Height="25" Margin="287,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="75"/>
+                    <TextBox Name="txt_columntarget" HorizontalAlignment="Left" Height="25" Margin="390,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="75"/>
+                    <Label Name="lbl_x" Content="X" HorizontalAlignment="Left" Margin="367,64,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label Name="lbl_x_2" Content="X" HorizontalAlignment="Left" Margin="367,0,0,0" VerticalAlignment="Center" FontWeight="Bold"/>
+                    <Button Name="btn_save_settings" Content="SAVE SETTINGS" HorizontalAlignment="Left" Margin="365,270,0,0" VerticalAlignment="Top" Height="30" Width="100" Click="click_btn_save_settings"/>
                 </Grid>
             </TabItem>
             <TabItem Header="ABILITIES" Height="40" Width="80">
                 <Grid Background="#FFE5E5E5">
                     <DataGrid Name="dg_abilities" Margin="53,30,437,30">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="NAME" Width="*"/>
-                            <DataGridTextColumn Header="PRICE" Width="*"/>
+                            <DataGridTextColumn Header="NAME" Binding="{Binding name}" Width="*"/>
+                            <DataGridTextColumn Header="PRICE" Binding="{Binding money}" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <Label Name="lbl_name_ability" Content="NAME" HorizontalAlignment="Left" Margin="354,79,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
@@ -39,15 +39,15 @@
                     <TextBox Name="txt_price_ability" HorizontalAlignment="Left" Margin="424,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
                     <Label Name="lbl_max_char" Content="(max 45 characters)" HorizontalAlignment="Left" Margin="509,214,0,0" VerticalAlignment="Top" FontStyle="Italic" FontSize="10"/>
                     <Button Name="btn_create_ability" Content="CREATE" HorizontalAlignment="Left" Margin="514,282,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="click_btn_create_ability"/>
-                    <Button Name="btn_delete_ability" Content="DELETE" HorizontalAlignment="Left" Margin="514,336,0,0" VerticalAlignment="Top" Width="90" Height="30"/>
+                    <Button Name="btn_delete_ability" Content="DELETE" HorizontalAlignment="Left" Margin="514,336,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="click_btn_delete_ability"/>
                 </Grid>
             </TabItem>
             <TabItem Header="PLAYER" Height="40" Width="80">
                 <Grid Background="#FFE5E5E5">
                     <DataGrid Name="dg_players" Margin="53,30,437,30">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="NAME" Width="*"/>
-                            <DataGridTextColumn Header="NICKNAME" Width="*"/>
+                            <DataGridTextColumn Header="NAME" Binding="{Binding name}" Width="*"/>
+                            <DataGridTextColumn Header="NICKNAME" Binding="{Binding nickname}" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <Label Name="lbl_name_player" Content="NAME" HorizontalAlignment="Left" Margin="366,35,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
@@ -55,12 +55,13 @@
                     <Label Name="lbl_avatar_player" Content="AVATAR" HorizontalAlignment="Left" Margin="357,179,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
                     <TextBox Name="txt_name_player" HorizontalAlignment="Left" Margin="424,39,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180"/>
                     <TextBox Name="txt_nickname_player" HorizontalAlignment="Left" Margin="424,77,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" Height="85"/>
-                    <TextBox Name="txt_price_ability_Copy" HorizontalAlignment="Left" Margin="424,183,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180"/>
-                    <Button Name="btn_create_ability_Copy" Content="CREATE" HorizontalAlignment="Left" Margin="338,368,0,0" VerticalAlignment="Top" Width="90" Height="30"/>
-                    <Button Name="btn_delete_ability_Copy" Content="DELETE" HorizontalAlignment="Left" Margin="514,368,0,0" VerticalAlignment="Top" Width="90" Height="30"/>
+                    <TextBox Name="txt_avatar_player" HorizontalAlignment="Left" Margin="424,183,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180"/>
+                    <Button Name="btn_create_player" Content="CREATE" HorizontalAlignment="Left" Margin="338,368,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="click_btn_create_player"/>
+                    <Button Name="btn_delete_player" Content="DELETE" HorizontalAlignment="Left" Margin="514,368,0,0" VerticalAlignment="Top" Width="90" Height="30"/>
                     <DataGrid Name="dg_abilities_player" Margin="338,214,108,82">
                         <DataGrid.Columns>
-                            <DataGridCheckBoxColumn Header="ABILITY NAME" Width="*"/>
+                            <DataGridTextColumn Header="ABILITY" Binding="{Binding name}" Width="*"/>
+                            <DataGridCheckBoxColumn Header="BUY" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
