@@ -1,0 +1,34 @@
+{
+    "nombre": "Lucas",
+    "apellido": "Sanz",
+    "lenguajes": ["python", "SQL", "Java", "C#"],
+    "edad": 26,
+    "experiencia":[
+        {
+            "empresa": "Asociación 2001",
+            "años": 5
+        },
+        {
+            "empresa": "IES Maestre",
+            "años": 2
+        }
+    ],
+    "direccion":[
+        {
+            "calle": "BB",
+            "numero": 8,
+            "localidad": "Ciudad Real",
+            "pago_luz":[
+                {
+                    "id": 1,
+                    "fecha": "abril 2021"
+                }
+            ]
+        },                    
+        {
+            "calle": "Moreria",
+            "numero": 6,
+            "localidad": "Ciudad Real"
+        }
+    ]
+}
