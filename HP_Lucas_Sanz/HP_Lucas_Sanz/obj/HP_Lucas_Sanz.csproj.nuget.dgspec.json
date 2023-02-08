@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leia\\OneDrive\\Documentos\\GitHub Local\\DI_Lucas\\HP_Lucas_Sanz\\HP_Lucas_Sanz\\HP_Lucas_Sanz.csproj": {}
+    "C:\\Users\\b15-16m\\source\\repos\\HP_Lucas_Sanz\\HP_Lucas_Sanz\\HP_Lucas_Sanz.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leia\\OneDrive\\Documentos\\GitHub Local\\DI_Lucas\\HP_Lucas_Sanz\\HP_Lucas_Sanz\\HP_Lucas_Sanz.csproj": {
+    "C:\\Users\\b15-16m\\source\\repos\\HP_Lucas_Sanz\\HP_Lucas_Sanz\\HP_Lucas_Sanz.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leia\\OneDrive\\Documentos\\GitHub Local\\DI_Lucas\\HP_Lucas_Sanz\\HP_Lucas_Sanz\\HP_Lucas_Sanz.csproj",
+        "projectUniqueName": "C:\\Users\\b15-16m\\source\\repos\\HP_Lucas_Sanz\\HP_Lucas_Sanz\\HP_Lucas_Sanz.csproj",
         "projectName": "HP_Lucas_Sanz",
-        "projectPath": "C:\\Users\\leia\\OneDrive\\Documentos\\GitHub Local\\DI_Lucas\\HP_Lucas_Sanz\\HP_Lucas_Sanz\\HP_Lucas_Sanz.csproj",
-        "packagesPath": "C:\\Users\\leia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leia\\OneDrive\\Documentos\\GitHub Local\\DI_Lucas\\HP_Lucas_Sanz\\HP_Lucas_Sanz\\obj\\",
+        "projectPath": "C:\\Users\\b15-16m\\source\\repos\\HP_Lucas_Sanz\\HP_Lucas_Sanz\\HP_Lucas_Sanz.csproj",
+        "packagesPath": "C:\\Users\\b15-16m\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\b15-16m\\source\\repos\\HP_Lucas_Sanz\\HP_Lucas_Sanz\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\leia\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\b15-16m\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

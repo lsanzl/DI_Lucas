@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:P2Hito4_Lucas_Sanz"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Hito 4 - Lucas Sanz" Height="450" Width="800">
     <Grid>
         
     </Grid>

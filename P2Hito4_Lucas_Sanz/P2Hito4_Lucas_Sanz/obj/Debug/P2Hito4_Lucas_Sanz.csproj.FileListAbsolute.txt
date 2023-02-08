@@ -1,0 +1,16 @@
+C:\Users\b15-16m\source\repos\P2Hito4_Lucas_Sanz\P2Hito4_Lucas_Sanz\bin\Debug\P2Hito4_Lucas_Sanz.exe.config
+C:\Users\b15-16m\source\repos\P2Hito4_Lucas_Sanz\P2Hito4_Lucas_Sanz\bin\Debug\P2Hito4_Lucas_Sanz.exe
+C:\Users\b15-16m\source\repos\P2Hito4_Lucas_Sanz\P2Hito4_Lucas_Sanz\bin\Debug\P2Hito4_Lucas_Sanz.pdb
+C:\Users\b15-16m\source\repos\P2Hito4_Lucas_Sanz\P2Hito4_Lucas_Sanz\obj\Debug\P2Hito4_Lucas_Sanz.csproj.AssemblyReference.cache
+C:\Users\b15-16m\source\repos\P2Hito4_Lucas_Sanz\P2Hito4_Lucas_Sanz\obj\Debug\P2Hito4_Lucas_Sanz.csproj.SuggestedBindingRedirects.cache
+C:\Users\b15-16m\source\repos\P2Hito4_Lucas_Sanz\P2Hito4_Lucas_Sanz\obj\Debug\View\MainWindow.g.cs
+C:\Users\b15-16m\source\repos\P2Hito4_Lucas_Sanz\P2Hito4_Lucas_Sanz\obj\Debug\App.g.cs
+C:\Users\b15-16m\source\repos\P2Hito4_Lucas_Sanz\P2Hito4_Lucas_Sanz\obj\Debug\P2Hito4_Lucas_Sanz_MarkupCompile.cache
+C:\Users\b15-16m\source\repos\P2Hito4_Lucas_Sanz\P2Hito4_Lucas_Sanz\obj\Debug\P2Hito4_Lucas_Sanz_MarkupCompile.lref
+C:\Users\b15-16m\source\repos\P2Hito4_Lucas_Sanz\P2Hito4_Lucas_Sanz\obj\Debug\View\MainWindow.baml
+C:\Users\b15-16m\source\repos\P2Hito4_Lucas_Sanz\P2Hito4_Lucas_Sanz\obj\Debug\P2Hito4_Lucas_Sanz.g.resources
+C:\Users\b15-16m\source\repos\P2Hito4_Lucas_Sanz\P2Hito4_Lucas_Sanz\obj\Debug\P2Hito4_Lucas_Sanz.Properties.Resources.resources
+C:\Users\b15-16m\source\repos\P2Hito4_Lucas_Sanz\P2Hito4_Lucas_Sanz\obj\Debug\P2Hito4_Lucas_Sanz.csproj.GenerateResource.cache
+C:\Users\b15-16m\source\repos\P2Hito4_Lucas_Sanz\P2Hito4_Lucas_Sanz\obj\Debug\P2Hito4_Lucas_Sanz.csproj.CoreCompileInputs.cache
+C:\Users\b15-16m\source\repos\P2Hito4_Lucas_Sanz\P2Hito4_Lucas_Sanz\obj\Debug\P2Hito4_Lucas_Sanz.exe
+C:\Users\b15-16m\source\repos\P2Hito4_Lucas_Sanz\P2Hito4_Lucas_Sanz\obj\Debug\P2Hito4_Lucas_Sanz.pdb
