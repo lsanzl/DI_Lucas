@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace P2Hito4_Lucas_Sanz.Reports {
+namespace P2Hito4_Lucas_Sanz.View {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace P2Hito4_Lucas_Sanz.Reports {
         
         public override string FullResourceName {
             get {
-                return "P2Hito4_Lucas_Sanz.Reports.CRReport_.rpt";
+                return "P2Hito4_Lucas_Sanz.View.CRReport_.rpt";
             }
             set {
                 // Do nothing

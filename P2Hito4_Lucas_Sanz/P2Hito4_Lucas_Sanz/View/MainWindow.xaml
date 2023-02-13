@@ -1,12 +1,19 @@
-﻿<Window x:Class="P2Hito4_Lucas_Sanz.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:P2Hito4_Lucas_Sanz"
+        xmlns:Viewer="clr-namespace:SAPBusinessObjects.WPF.Viewer;assembly=SAPBusinessObjects.WPF.Viewer" x:Class="P2Hito4_Lucas_Sanz.MainWindow"
         mc:Ignorable="d"
-        Title="Hito 4 - Lucas Sanz" Height="450" Width="800">
+        Title="Hito 4 - Lucas Sanz" Height="1080" Width="1920">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="573*"/>
+            <ColumnDefinition Width="227*"/>
+        </Grid.ColumnDefinitions>
+
+        <Viewer:CrystalReportsViewer Name="cr_viewer" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Height="982" Width="1900" Grid.ColumnSpan="2"/>
+
     </Grid>
 </Window>
