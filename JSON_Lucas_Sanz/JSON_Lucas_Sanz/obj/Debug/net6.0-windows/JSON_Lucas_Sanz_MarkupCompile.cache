@@ -1,5 +1,5 @@
 ﻿JSON_Lucas_Sanz
-1.0.0.0
+
 
 winexe
 C#
@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\leia\OneDrive\Documentos\GitHub Local\DI_Lucas\JSON_Lucas_Sanz\JSON_Lucas_Sanz\App.xaml
 1-487866684
 
-51233148773
+3-1386480508
 194237474483
 View\MainWindow.xaml;
 
-True
+False
 
