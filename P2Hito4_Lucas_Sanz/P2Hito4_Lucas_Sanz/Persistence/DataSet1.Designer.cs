@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace P2Hito4_Lucas_Sanz {
+namespace P2Hito4_Lucas_Sanz.Persistence {
     
     
     /// <summary>

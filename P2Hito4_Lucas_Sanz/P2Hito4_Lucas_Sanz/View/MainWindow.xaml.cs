@@ -1,4 +1,5 @@
-﻿using System;
+﻿using P2Hito4_Lucas_Sanz.View;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -50,13 +51,13 @@ namespace P2Hito4_Lucas_Sanz
             }
 
             //Crear una instancia de crystal report
-            CrystalReport1 repor = new CrystalReport1();
+            CRReport_ repor = new CRReport_();
 
             //Incluir el data source al crystal report
-            repor.Database.Tables["Datatable1"].SetDataSource((DataTable)tabla1);
+            repor.Database.Tables["DataTable1"].SetDataSource((DataTable)tabla1);
 
             //Asignar el informe para crystal report viewer
-            //cr_viewer.
+            cr_viewer.ViewerCore.ReportSource = repor;
         }
     }
 }

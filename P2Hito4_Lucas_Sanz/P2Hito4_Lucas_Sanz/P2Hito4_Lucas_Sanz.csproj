@@ -73,21 +73,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CrystalReport1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="DataSet1.cs">
+    <Compile Include="Persistence\DataSet1.cs">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DataSet1.Designer.cs">
+    <Compile Include="Persistence\DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reports\CRReport_.cs">
+    <Compile Include="View\CRReport_.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CRReport_.rpt</DependentUpon>
@@ -112,27 +106,23 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="CrystalReport1.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\CRReport_.rpt">
+    <EmbeddedResource Include="View\CRReport_.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CRReport_.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="DataSet1.xsc">
+    <None Include="Persistence\DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="DataSet1.xsd">
+    <None Include="Persistence\DataSet1.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DataSet1.xss">
+    <None Include="Persistence\DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\DataSet1.datasource" />
@@ -147,5 +137,6 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
