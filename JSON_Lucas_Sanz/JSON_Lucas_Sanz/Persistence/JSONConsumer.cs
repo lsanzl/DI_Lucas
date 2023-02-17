@@ -28,17 +28,18 @@ public class JSONConsumer
             age = c.age
         };
         string stringconsumer = JsonSerializer.Serialize(consumertojson);
+        
         w.Write(stringconsumer);
         w.Write("\n");
         w.Close();
-    }
+}
     public List<Consumer> ReadConsumerJson()
     {
         List<Consumer> list_consumers = new List<Consumer>();
 
         foreach (string line in System.IO.File.ReadLines(jsonfile))
         {
-            if (!line.Equals(""))
+            if (line.Length != 0)
             {
                 Consumer c = JsonSerializer.Deserialize<Consumer>(line);
                 list_consumers.Add(c);

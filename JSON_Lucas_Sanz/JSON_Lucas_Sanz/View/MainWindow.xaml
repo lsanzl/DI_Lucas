@@ -37,7 +37,7 @@
                     <DataGrid Name="dg_consumers" Margin="30,73,374,43">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="*"/>
-                            <DataGridTextColumn Header="NAME" Binding="{Binding name_costumer}" Width="*"/>
+                            <DataGridTextColumn Header="NAME" Binding="{Binding name_consumer}" Width="*"/>
                             <DataGridTextColumn Header="AGE" Binding="{Binding age}" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
