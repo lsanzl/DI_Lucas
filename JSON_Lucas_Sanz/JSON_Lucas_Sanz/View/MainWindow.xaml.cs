@@ -22,17 +22,34 @@ namespace JSON_Lucas_Sanz
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Consumer c;
+        private Product p;
+        private JSONConsumer jc;
+        private JSONProduct jp;
+        private List<Consumer> list_consumer;
+        private List<Product> list_product;
         public MainWindow()
         {
+            c = new Consumer(10, "Lucas", 26);
+            c.ConsumerToJson();
+            c = new Consumer(8, "Lourdes", 25);
+            c.ConsumerToJson();
+            
+            jc = new JSONConsumer();
             InitializeComponent();
-
-            Costumer c1 = new Costumer(10, "Lucas", 26);
-            Costumer c2 = new Costumer(8, "Lourdes", 25);
-
-            JSONCostumer jc = new JSONCostumer();
-
-            Costumer crr = jc.ReadCostumerJson();
-            dg_costumers.Items.Add(crr);
+            initializeDG();
+        }
+        public void initializeDG()
+        {
+            dg_consumers.Items.Clear();
+            dg_products.Items.Clear();
+            dg_products2.Items.Clear();
+            
+            list_consumer = jc.ReadConsumerJson();
+            foreach (Consumer caux in list_consumer)
+            {
+                dg_consumers.Items.Add(caux);
+            }
         }
     }
 }

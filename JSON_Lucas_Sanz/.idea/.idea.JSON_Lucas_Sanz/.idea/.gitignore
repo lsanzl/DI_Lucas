@@ -3,9 +3,15 @@
 /workspace.xml
 # Rider ignored files
 /projectSettingsUpdater.xml
+<<<<<<< Updated upstream
 /modules.xml
 /contentModel.xml
 /.idea.JSON_Lucas_Sanz.iml
+=======
+/contentModel.xml
+/.idea.JSON_Lucas_Sanz.iml
+/modules.xml
+>>>>>>> Stashed changes
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files

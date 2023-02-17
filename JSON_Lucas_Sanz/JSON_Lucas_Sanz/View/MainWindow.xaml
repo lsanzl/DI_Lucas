@@ -10,7 +10,7 @@
         <TabControl TabStripPlacement="Left">
             <TabItem Header="NEW" Height="40" Width="80">
                 <Grid Background="#FFE5E5E5">
-                    <Label Name="lbl_costumers" Content="COSTUMERS MANAGEMENT" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="36" Width="322" FontWeight="Bold" FontSize="20" FontStyle="Italic"/>
+                    <Label Name="lbl_consumers" Content="CONSUMERS MANAGEMENT" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="36" Width="322" FontWeight="Bold" FontSize="20" FontStyle="Italic"/>
                     <Label Name="lbl_id" Content="ID:" HorizontalAlignment="Left" Margin="60,71,0,0" VerticalAlignment="Top"/>
                     <Label Name="lbl_name" Content="Name:" HorizontalAlignment="Left" Margin="242,71,0,0" VerticalAlignment="Top"/>
                     <Label Name="lbl_age" Content="Age:" HorizontalAlignment="Left" Margin="455,71,0,0" VerticalAlignment="Top"/>
@@ -34,7 +34,7 @@
             </TabItem>
             <TabItem Header="PRODUCTS" Height="40" Width="80">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid Name="dg_costumers" Margin="30,73,374,43">
+                    <DataGrid Name="dg_consumers" Margin="30,73,374,43">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="*"/>
                             <DataGridTextColumn Header="NAME" Binding="{Binding name_costumer}" Width="*"/>
@@ -47,7 +47,7 @@
                             <DataGridTextColumn Header="PRICE" Binding="{Binding price}" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Label Name="lbl_costumers2" Content="COSTUMERS" HorizontalAlignment="Left" Margin="127,34,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontStyle="Italic"/>
+                    <Label Name="lbl_consumers2" Content="CONSUMERS" HorizontalAlignment="Left" Margin="127,34,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontStyle="Italic"/>
                     <Label Name="lbl_products2" Content="PRODUCTS" HorizontalAlignment="Left" Margin="470,34,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontStyle="Italic"/>
                 </Grid>
             </TabItem>
