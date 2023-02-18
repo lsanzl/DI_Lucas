@@ -22,19 +22,19 @@
                     <TextBox Name="txt_age" HorizontalAlignment="Left" Margin="494,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="81"/>
                     <DataGrid Name="dg_products" Margin="10,145,403,32">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="NAME" Binding="{Binding product_name}" Width="*"/>
+                            <DataGridTextColumn Header="NAME" Binding="{Binding name_product}" Width="*"/>
                             <DataGridTextColumn Header="PRICE" Binding="{Binding price}" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <TextBox Name="txt_product_name" HorizontalAlignment="Left" Margin="437,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="217"/>
                     <TextBox Name="txt_price" HorizontalAlignment="Left" Margin="436,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="81"/>
-                    <Button Name="btn_add_product" Content="ADD" HorizontalAlignment="Left" Margin="564,186,0,0" VerticalAlignment="Top" Height="23" Width="90" FontWeight="Bold"/>
-                    <Button Name="btn_save" Content="SAVE" HorizontalAlignment="Left" Margin="564,373,0,0" VerticalAlignment="Top" Height="23" Width="90" FontWeight="Bold"/>
+                    <Button Name="btn_add_product" Content="ADD" HorizontalAlignment="Left" Margin="564,186,0,0" VerticalAlignment="Top" Height="23" Width="90" FontWeight="Bold" Click="click_add_product"/>
+                    <Button Name="btn_save" Content="SAVE" HorizontalAlignment="Left" Margin="564,373,0,0" VerticalAlignment="Top" Height="23" Width="90" FontWeight="Bold" Click="click_btn_save"/>
                 </Grid>
             </TabItem>
             <TabItem Header="PRODUCTS" Height="40" Width="80">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid Name="dg_consumers" Margin="30,73,374,43">
+                    <DataGrid Name="dg_consumers" Margin="30,73,374,80">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="*"/>
                             <DataGridTextColumn Header="NAME" Binding="{Binding name_consumer}" Width="*"/>
@@ -43,12 +43,13 @@
                     </DataGrid>
                     <DataGrid Name="dg_products2" Margin="386,73,43,43">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="NAME" Binding="{Binding product_name}" Width="*"/>
+                            <DataGridTextColumn Header="NAME" Binding="{Binding name_product}" Width="*"/>
                             <DataGridTextColumn Header="PRICE" Binding="{Binding price}" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Label Name="lbl_consumers2" Content="CONSUMERS" HorizontalAlignment="Left" Margin="127,34,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontStyle="Italic"/>
+                    <Label Name="lbl_consumers2" Content="CONSUMERS" HorizontalAlignment="Left" Margin="125,34,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontStyle="Italic"/>
                     <Label Name="lbl_products2" Content="PRODUCTS" HorizontalAlignment="Left" Margin="470,34,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontStyle="Italic"/>
+                    <Button Name="btn_show" Content="SHOW PRODUCTS" HorizontalAlignment="Left" Margin="231,365,0,0" VerticalAlignment="Top" FontWeight="Bold" Click="click_btn_show"/>
                 </Grid>
             </TabItem>
         </TabControl>

@@ -1531,19 +1531,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\b15-16m\\.nuget\\packages\\": {}
+    "C:\\Users\\leia\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\b15-16m\\source\\repos\\P2Hito3_Lucas_Sanz\\P2Hito3_Lucas_Sanz\\P2Hito3_Lucas_Sanz.csproj",
+      "projectUniqueName": "C:\\Users\\leia\\OneDrive\\Documentos\\GitHub Local\\DI_Lucas\\P2Hito3_Lucas_Sanz\\P2Hito3_Lucas_Sanz\\P2Hito3_Lucas_Sanz.csproj",
       "projectName": "P2Hito3_Lucas_Sanz",
-      "projectPath": "C:\\Users\\b15-16m\\source\\repos\\P2Hito3_Lucas_Sanz\\P2Hito3_Lucas_Sanz\\P2Hito3_Lucas_Sanz.csproj",
-      "packagesPath": "C:\\Users\\b15-16m\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\b15-16m\\source\\repos\\P2Hito3_Lucas_Sanz\\P2Hito3_Lucas_Sanz\\obj\\",
+      "projectPath": "C:\\Users\\leia\\OneDrive\\Documentos\\GitHub Local\\DI_Lucas\\P2Hito3_Lucas_Sanz\\P2Hito3_Lucas_Sanz\\P2Hito3_Lucas_Sanz.csproj",
+      "packagesPath": "C:\\Users\\leia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\leia\\OneDrive\\Documentos\\GitHub Local\\DI_Lucas\\P2Hito3_Lucas_Sanz\\P2Hito3_Lucas_Sanz\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\b15-16m\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\leia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1593,7 +1598,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }
