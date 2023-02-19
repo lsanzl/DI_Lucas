@@ -13,10 +13,10 @@ namespace HP_Lucas_Sanz.Model
         public int idA { get; set; }
         public string name { get; set; }
         public string description { get; set; }
-        public float money { get; set; }
+        public int money { get; set; }
         public ManageAbility manage_ability { get; set; }
 
-        public Ability(string name, string description, float money)
+        public Ability(string name, string description, int money)
         {
             this.name = name;
             this.description = description;

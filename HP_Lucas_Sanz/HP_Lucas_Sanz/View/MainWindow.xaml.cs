@@ -24,13 +24,16 @@ namespace HP_Lucas_Sanz
         Buy b_aux;
         Ability a_aux;
         Player p_aux;
-        float initial_money;
+        int initial_money;
+        Boolean selected;
+        Player player_selected;
         public MainWindow()
         {
             b_aux = new Buy();
             a_aux = new Ability();
             p_aux = new Player();
             initial_money = 100;
+            selected = false;
             InitializeComponent();
             initializeDataContainers();
         }
@@ -64,7 +67,7 @@ namespace HP_Lucas_Sanz
             txt_nickname_player.Clear();
             txt_avatar_player.Clear();
             dg_abilities_player.Items.Clear();
-            lbl_actual_money.Content = "Actual money: " + initial_money;
+            lbl_actual_money.Content = "Actual money: ";
         }
         private void clearFieldsSettings()
         {
@@ -83,7 +86,7 @@ namespace HP_Lucas_Sanz
             }
             int nrows = Convert.ToInt32(txt_rows.Text);
             int ncolumns = Convert.ToInt32(txt_columns.Text);
-            initial_money = float.Parse(txt_money.Text);
+            initial_money = Convert.ToInt32(txt_money.Text);
             int rtarget = Convert.ToInt32(txt_rowtarget.Text);
             int ctarget = Convert.ToInt32(txt_columntarget.Text);
             if (rtarget > nrows || ctarget > ncolumns)
@@ -110,7 +113,7 @@ namespace HP_Lucas_Sanz
             }
             string name_a = txt_name_ability.Text;
             string description_a = txt_description_ability.Text;
-            float price_a = float.Parse(txt_price_ability.Text);
+            int price_a = Convert.ToInt32(txt_price_ability.Text);
 
             Ability a = new Ability(name_a, description_a, price_a);
             a.insertAbility();
@@ -135,7 +138,11 @@ namespace HP_Lucas_Sanz
             {
                 MessageBox.Show("Introduzca todos los campos", "Faltan datos");
                 return;
-            }            
+            }
+            Player p = new Player(txt_name_player.Text, txt_nickname_player.Text, txt_avatar_player.Text, initial_money);
+            p.insertPlayer();
+            clearFieldsPlayer();
+            initializeDataContainers();
         }
         private void click_btn_buy(object sender, RoutedEventArgs e)
         {
@@ -144,14 +151,34 @@ namespace HP_Lucas_Sanz
                 MessageBox.Show("Seleccione habilidad a comprar", "Ninguna habilidad seleccionada");
                 return;
             }
+
+            if (!selected)
+            {
+                MessageBox.Show("Seleccione jugador", "Ningún jugador asignado");
+                return;
+            }
             Ability a = (Ability)dg_abilities_player.SelectedItem;
-            if (a.money > initial_money)
+            if (a.money > player_selected.money_player)
             {
                 MessageBox.Show("Dinero insuficiente", "No puede comprar esta habilidad");
                 return;
             }
-            initial_money -= a.money;
-            dg_abilities_player.
+            player_selected.money_player -= a.money;
+            player_selected.player_abilty.Add(a);
+            MessageBox.Show("Habilidad adquirida");
+            dg_abilities_player.Items.RemoveAt(dg_abilities_player.SelectedIndex);
+            selected = false;
+        }
+        private void click_btn_select(object sender, RoutedEventArgs e)
+        {
+            if (dg_players.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione jugador primero", "Ningún jugador seleccionado");
+                return;
+            }
+            player_selected = (Player)dg_players.SelectedItem;
+            lbl_actual_money.Content = "Actual money: "+player_selected.money_player.ToString();
+            selected = true;
         }
     }
 }
