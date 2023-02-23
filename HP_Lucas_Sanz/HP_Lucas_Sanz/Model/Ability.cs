@@ -16,6 +16,10 @@ namespace HP_Lucas_Sanz.Model
         public int money { get; set; }
         public ManageAbility manage_ability { get; set; }
 
+        public Ability()
+        {
+            this.manage_ability = new ManageAbility();
+        }
         public Ability(string name, string description, int money)
         {
             this.name = name;
@@ -23,8 +27,12 @@ namespace HP_Lucas_Sanz.Model
             this.money = money;
             this.manage_ability = new ManageAbility();
         }
-        public Ability()
+        public Ability(int idA, string name, string description, int money)
         {
+            this.idA = idA;
+            this.name = name;
+            this.description = description;
+            this.money = money;
             this.manage_ability = new ManageAbility();
         }
         public void insertAbility()

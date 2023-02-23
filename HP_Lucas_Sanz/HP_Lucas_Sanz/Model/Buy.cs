@@ -13,6 +13,8 @@ namespace HP_Lucas_Sanz.Model
         public int idC { get; set; }
         public int idA { get; set; }
         public ManageBuy manage_buy { get; set; }
+        public Player p_aux;
+        public Ability a_aux;
         public Buy(int idC, int idA)
         {
             this.idC = idC;
@@ -42,8 +44,10 @@ namespace HP_Lucas_Sanz.Model
         }
         public List<Buy> getBuys(Player player)
         {
+            Ability a_aux = new Ability();
             List<Object> object_list = DBBroker.getAgent().readSQL($"select * from hplucas.buy where idC='{player.idC}';");
             List<Buy> buy_list = new List<Buy>();
+            List<Ability> ability_list = a_aux.getAbilities();
             int idA;
             int idC;
 
@@ -54,6 +58,16 @@ namespace HP_Lucas_Sanz.Model
 
                 Buy b = new Buy(idC, idA);
                 buy_list.Add(b);
+            }
+            foreach (Buy b in buy_list)
+            {
+                foreach (Ability a in ability_list)
+                {
+                    if (b.idA == a.idA)
+                    {
+                        player.player_ability.Add(a);
+                    }
+                }
             }
             return buy_list;
         }

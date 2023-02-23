@@ -108,7 +108,7 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                     </Grid>
-                    <Button Name="btn_start_game" Content="START" HorizontalAlignment="Left" Margin="506,401,0,0" VerticalAlignment="Top" Width="80" Height="25"/>
+                    <Button Name="btn_start_game" Content="START" HorizontalAlignment="Left" Margin="506,401,0,0" VerticalAlignment="Top" Width="80" Height="25" Click="click_btn_start_game"/>
                     <Button Name="btn_next" Content="NEXT" HorizontalAlignment="Left" Margin="622,401,0,0" VerticalAlignment="Top" Width="80" Height="25"/>
                 </Grid>
             </TabItem>

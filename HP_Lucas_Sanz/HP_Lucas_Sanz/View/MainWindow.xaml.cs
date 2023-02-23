@@ -27,6 +27,10 @@ namespace HP_Lucas_Sanz
         int initial_money;
         Boolean selected;
         Player player_selected;
+        Map m;
+        List<Ability> ability_list;
+        List<Player> player_list;
+        List<Buy> buy_list;
         public MainWindow()
         {
             b_aux = new Buy();
@@ -34,14 +38,16 @@ namespace HP_Lucas_Sanz
             p_aux = new Player();
             initial_money = 100;
             selected = false;
+            m = new Map(15, 15, 15, 15);
+            
             InitializeComponent();
             initializeDataContainers();
         }
         private void initializeDataContainers()
         {
-            List<Ability> ability_list = a_aux.getAbilities();
-            List<Player> player_list = p_aux.getPlayers();
-            
+            ability_list = a_aux.getAbilities();
+            player_list = p_aux.getPlayers();
+
             foreach (Ability a in ability_list)
             {
                 dg_abilities.Items.Add(a);
@@ -50,6 +56,7 @@ namespace HP_Lucas_Sanz
             foreach (Player p in player_list)
             {
                 dg_players.Items.Add(p);
+                b_aux.getBuys(p);
             }
         }
         private void clearFieldsAbility()
@@ -96,6 +103,7 @@ namespace HP_Lucas_Sanz
                 txt_columntarget.Clear();
                 return;
             }
+            m = new Map(nrows, ncolumns, rtarget, ctarget);
             MessageBox.Show("Ajustes guardados");
             clearFieldsSettings();
         }
@@ -164,7 +172,8 @@ namespace HP_Lucas_Sanz
                 return;
             }
             player_selected.money_player -= a.money;
-            player_selected.player_abilty.Add(a);
+            player_selected.player_ability.Add(a);
+            b_aux = new Buy(player_selected.idC, a.idA);
             MessageBox.Show("Habilidad adquirida");
             dg_abilities_player.Items.RemoveAt(dg_abilities_player.SelectedIndex);
             selected = false;
@@ -179,6 +188,15 @@ namespace HP_Lucas_Sanz
             player_selected = (Player)dg_players.SelectedItem;
             lbl_actual_money.Content = "Actual money: "+player_selected.money_player.ToString();
             selected = true;
+        }
+        private void click_btn_start_game(object sender, RoutedEventArgs e)
+        {
+            if (p_aux.getPlayers().Count <= 1)
+            {
+                MessageBox.Show("Cree al menos dos jugadores para empezar el juego", "Jugadores insuficientes");
+                return;
+            }
+
         }
     }
 }

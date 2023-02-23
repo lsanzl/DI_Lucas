@@ -17,14 +17,16 @@ namespace HP_Lucas_Sanz.Persistence.Manage
             string nickname;
             string avatar;
             int money;
+            int idC;
 
             foreach (List<Object> o in players_objects)
             {
+                idC = Convert.ToInt32(o[0].ToString());
                 name = o[1].ToString();
                 nickname = o[2].ToString();
                 avatar = o[3].ToString();
                 money = Convert.ToInt32(o[6].ToString());
-                Player a = new Player(name, nickname, avatar, money);
+                Player a = new Player(idC, name, nickname, avatar, money);
                 players_list.Add(a);
             }
             return players_list;
