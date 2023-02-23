@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -26,7 +27,7 @@ namespace P2Hito3_Lucas_Sanz
         Player player;
         Tournament tournament;
         Tournament_DG tournament_dg;
-        String[] roles = {"Top", "Support", "Mid", "Jungle", "ADC"};
+        String[] roles = { "Top", "Support", "Mid", "Jungle", "ADC" };
         String[] types = { "Headline", "Reserve" };
         /// <summary>
         /// Main method
@@ -110,7 +111,7 @@ namespace P2Hito3_Lucas_Sanz
             }
             cb_tourcountry.Items.Clear();
             dg_tournaments.Items.Clear();
-            dg_tournaments.SelectedIndex= -1;
+            dg_tournaments.SelectedIndex = -1;
         }
         /// <summary>
         /// Method to call insert method of players, first it checks all parameters are ready and that teams are not full
@@ -135,7 +136,7 @@ namespace P2Hito3_Lucas_Sanz
                 {
                     MessageBox.Show("Ya hay 5 titulares, debe ser suplente");
                     return;
-                } 
+                }
             }
             List<Team> teams = team.readTeams();
             int idTeam_s = 0;

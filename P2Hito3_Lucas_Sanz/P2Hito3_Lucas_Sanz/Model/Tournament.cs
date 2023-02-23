@@ -17,6 +17,7 @@ namespace P2Hito3_Lucas_Sanz.Model
         List<Team> teams_semifinales = new List<Team>();
         List<Team> teams_final = new List<Team>();
         Team team_aux = new Team();
+        ManageHeat manageheat_aux = new ManageHeat();
 
         Random r = new Random();
 
@@ -68,7 +69,7 @@ namespace P2Hito3_Lucas_Sanz.Model
             Boolean repeat = false;
             string traza_inicial = "16 seleccionados para octavos:\n";
 
-            for (int i = 0; i<16; i++)
+            for (int i = 0; i < 16; i++)
             {
                 while (!repeat)
                 {
@@ -77,6 +78,7 @@ namespace P2Hito3_Lucas_Sanz.Model
                 }
                 num_used.Add(num_team);
                 teams_octavos.Add(teams_totals[num_team]);
+                manageheat_aux.insertHeat(this, teams_totals[num_team]);
                 repeat = false;
                 traza_inicial += teams_totals[num_team].name + "\n";
             }
@@ -93,7 +95,7 @@ namespace P2Hito3_Lucas_Sanz.Model
             int rand = 0;
             string traza_juegan = $"Juegan ronda {round}:\n";
             string traza_ganadores = $"Ganadores ronda {round}:\n";
-            while(ronda_actual.Count > 0)
+            while (ronda_actual.Count > 0)
             {
                 Team team1 = new Team();
                 Team team2 = new Team();

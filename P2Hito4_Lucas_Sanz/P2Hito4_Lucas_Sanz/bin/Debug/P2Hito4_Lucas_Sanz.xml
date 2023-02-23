@@ -22,6 +22,26 @@
             Application Entry Point.
             </summary>
         </member>
+        <member name="T:P2Hito4_Lucas_Sanz.DataSetLOL">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:P2Hito4_Lucas_Sanz.DataSetLOL.DataTable1DataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:P2Hito4_Lucas_Sanz.DataSetLOL.DataTable1Row">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:P2Hito4_Lucas_Sanz.DataSetLOL.DataTable1RowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
         <member name="M:P2Hito4_Lucas_Sanz.Model.Country.#ctor">
             <summary>
             Constructor of Country

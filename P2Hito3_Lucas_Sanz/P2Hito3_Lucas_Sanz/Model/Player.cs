@@ -60,7 +60,7 @@ namespace P2Hito3_Lucas_Sanz.Model
         /// <param name="type"> Headline or reserve </param>
         /// <param name="idTeam"> ID of the team to which it belongs </param>
         /// <param name="idCountry"> ID of country of birth </param>
-        public Player(string nickName,string name, string surname,string role, string type, int idTeam, int idCountry)
+        public Player(string nickName, string name, string surname, string role, string type, int idTeam, int idCountry)
         {
             this.nickName = nickName;
             this.idTeam = idTeam;

@@ -9,7 +9,7 @@ using System.Windows;
 namespace P2Hito3_Lucas_Sanz
 {
     /// <summary>
-    /// Interaction logic for App.xaml
+    /// Lógica de interacción para App.xaml
     /// </summary>
     public partial class App : Application
     {
