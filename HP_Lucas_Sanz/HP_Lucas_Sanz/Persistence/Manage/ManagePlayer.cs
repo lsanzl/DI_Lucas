@@ -16,13 +16,15 @@ namespace HP_Lucas_Sanz.Persistence.Manage
             string name;
             string nickname;
             string avatar;
+            int money;
 
             foreach (List<Object> o in players_objects)
             {
                 name = o[1].ToString();
                 nickname = o[2].ToString();
                 avatar = o[3].ToString();
-                Player a = new Player(name, nickname, avatar);
+                money = Convert.ToInt32(o[6].ToString());
+                Player a = new Player(name, nickname, avatar, money);
                 players_list.Add(a);
             }
             return players_list;
@@ -30,11 +32,11 @@ namespace HP_Lucas_Sanz.Persistence.Manage
         public void insertPlayer(Player player)
         {
             DBBroker.getAgent().executeSQL("alter table hplucas.player AUTO_INCREMENT = 1;");
-            DBBroker.getAgent().executeSQL($"insert into hplucas.player (name, nickname, avatar) values ('{player.name}','{player.nickname}','{player.avatar}');");
+            DBBroker.getAgent().executeSQL($"insert into hplucas.player (name, nickname, avatar, money) values ('{player.name}','{player.nickname}','{player.avatar}','{player.money_player}');");
         }
         public void deletePlayer(Player player)
         {
-            DBBroker.getAgent().executeSQL($"delete from hplucas.ability where name='{player.name}';");
+            DBBroker.getAgent().executeSQL($"delete from hplucas.player where name='{player.name}';");
         }
     }
 }

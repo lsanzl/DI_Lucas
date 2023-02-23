@@ -15,13 +15,13 @@ namespace HP_Lucas_Sanz.Persistence.Manage
             List<Ability> abilities_list = new List<Ability>();
             string name;
             string description;
-            float money;
+            int money;
             
             foreach (List<Object> o in abilities_objects)
             {
                 name = o[1].ToString();
                 description = o[2].ToString();
-                money = float.Parse(o[3].ToString());
+                money = Convert.ToInt32(o[3].ToString());
                 Ability a = new Ability(name, description, money);
                 abilities_list.Add(a);
             }

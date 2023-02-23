@@ -44,7 +44,7 @@
             </TabItem>
             <TabItem Header="PLAYER" Height="40" Width="80">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid Name="dg_players" Margin="25,30,465,61">
+                    <DataGrid Name="dg_players" Margin="25,30,465,80">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="NAME" Binding="{Binding name}" Width="*"/>
                             <DataGridTextColumn Header="NICKNAME" Binding="{Binding nickname}" Width="*"/>
@@ -57,9 +57,9 @@
                     <TextBox Name="txt_nickname_player" HorizontalAlignment="Left" Margin="338,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" Height="85"/>
                     <TextBox Name="txt_avatar_player" HorizontalAlignment="Left" Margin="338,178,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180"/>
                     <Button Name="btn_create_player" Content="CREATE" HorizontalAlignment="Left" Margin="568,30,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="click_btn_create_player" RenderTransformOrigin="0.492,1.114"/>
-                    <Button Name="btn_delete_player" Content="DELETE" HorizontalAlignment="Left" Margin="25,378,0,0" VerticalAlignment="Top" Width="90" Height="30"/>
-                    <Button Name="btn_buy" Content="BUY" HorizontalAlignment="Left" Margin="338,378,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="click_btn_buy" RenderTransformOrigin="1.729,0.539"/>
-                    <DataGrid Name="dg_abilities_player" Margin="338,231,194,61">
+                    <Button Name="btn_delete_player" Content="DELETE" HorizontalAlignment="Left" Margin="25,363,0,0" VerticalAlignment="Top" Width="90" Height="30"/>
+                    <Button Name="btn_buy" Content="BUY" HorizontalAlignment="Left" Margin="338,363,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="click_btn_buy" RenderTransformOrigin="1.729,0.539"/>
+                    <DataGrid Name="dg_abilities_player" Margin="338,231,194,80">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="ABILITY" Binding="{Binding name}" Width="*"/>
                             <DataGridTextColumn Header="PRICE" Binding="{Binding money}" Width="*"/>
@@ -67,6 +67,7 @@
                     </DataGrid>
                     <Label Name="lbl_separate" Content="-------------------------------------------------------------------------------" HorizontalAlignment="Left" Margin="280,200,0,0" VerticalAlignment="Top"/>
                     <Label Name="lbl_actual_money" Content="Actual money: " HorizontalAlignment="Left" Margin="523,231,0,0" VerticalAlignment="Top" Width="152" FontStyle="Italic" FontWeight="Bold"/>
+                    <Button Name="btn_select" Content="SELECT" HorizontalAlignment="Left" Margin="157,363,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="click_btn_select"/>
                 </Grid>
             </TabItem>
             <TabItem Header="GAME" Height="40" Width="80">

@@ -67,3 +67,4 @@ C:\Users\b15-16m\source\repos\JSON_Lucas_Sanz\JSON_Lucas_Sanz\obj\Debug\net6.0-w
 C:\Users\b15-16m\source\repos\JSON_Lucas_Sanz\JSON_Lucas_Sanz\obj\Debug\net6.0-windows\JSON_Lucas_Sanz.pdb
 C:\Users\b15-16m\source\repos\JSON_Lucas_Sanz\JSON_Lucas_Sanz\obj\Debug\net6.0-windows\JSON_Lucas_Sanz.genruntimeconfig.cache
 C:\Users\b15-16m\source\repos\JSON_Lucas_Sanz\JSON_Lucas_Sanz\obj\Debug\net6.0-windows\ref\JSON_Lucas_Sanz.dll
+C:\Users\leia\OneDrive\Documentos\GitHub Local\DI_Lucas\JSON_Lucas_Sanz\JSON_Lucas_Sanz\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
