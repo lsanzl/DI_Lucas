@@ -1,6 +1,10 @@
 ﻿using P2Hito3_Lucas_Sanz.Model;
+using P2Hito3_Lucas_Sanz.Persistence.Manage;
+using P2Hito3_Lucas_Sanz.Report;
+using P2Hito3_Lucas_Sanz.View;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Numerics;
 using System.Text;
@@ -27,8 +31,13 @@ namespace P2Hito3_Lucas_Sanz
         Player player;
         Tournament tournament;
         Tournament_DG tournament_dg;
+        ManageQuery managequery_aux;
+        ManageEdition manageedition_aux;
         String[] roles = { "Top", "Support", "Mid", "Jungle", "ADC" };
         String[] types = { "Headline", "Reserve" };
+        Informe_1 informe;
+        Informe_2 informe2;
+        ReportViewer reporter;
         /// <summary>
         /// Main method
         /// </summary>
@@ -39,6 +48,9 @@ namespace P2Hito3_Lucas_Sanz
             team = new Team();
             player = new Player();
             tournament_dg = new Tournament_DG();
+            managequery_aux = new ManageQuery();
+            manageedition_aux = new ManageEdition();
+            reporter = new ReportViewer();
             btn_start.IsEnabled = false;
             initializeCB();
         }
@@ -51,6 +63,7 @@ namespace P2Hito3_Lucas_Sanz
             List<Player> players = player.readPlayers();
             List<Team> teams = team.readTeams();
             List<Tournament_DG> tournaments_dg = tournament_dg.readTournaments();
+            List<string> year_list = manageedition_aux.getEditions();
 
             foreach (Country c in countries)
             {
@@ -69,6 +82,11 @@ namespace P2Hito3_Lucas_Sanz
             foreach (Tournament_DG to in tournaments_dg)
             {
                 dg_tournaments.Items.Add(to);
+                cb_edition_report.Items.Add(to.idTournamentDG);
+            }
+            foreach(string year in year_list)
+            {
+                cb_year_report.Items.Add(year);
             }
             cb_role.ItemsSource = roles;
             cb_type.ItemsSource = types;
@@ -112,6 +130,11 @@ namespace P2Hito3_Lucas_Sanz
             cb_tourcountry.Items.Clear();
             dg_tournaments.Items.Clear();
             dg_tournaments.SelectedIndex = -1;
+        }
+        private void clearFieldsReport()
+        {
+            cb_year_report.Items.Clear();
+            cb_edition_report.Items.Clear();
         }
         /// <summary>
         /// Method to call insert method of players, first it checks all parameters are ready and that teams are not full
@@ -230,6 +253,7 @@ namespace P2Hito3_Lucas_Sanz
             tournament.insertTournament();
             btn_start.IsEnabled = true;
             clearFieldsTournament(false);
+            clearFieldsReport();
             initializeCB();
         }
         /// <summary>
@@ -241,6 +265,7 @@ namespace P2Hito3_Lucas_Sanz
         {
             tournament.startTournament();
             clearFieldsTournament(true);
+            clearFieldsReport();
             initializeCB();
         }
         /// <summary>
@@ -260,6 +285,99 @@ namespace P2Hito3_Lucas_Sanz
             MessageBox.Show("Torneo eliminado");
             clearFieldsTournament(true);
             initializeCB();
+        }
+
+        private void click_btn_consulta1(object sender, RoutedEventArgs e)
+        {
+            restartReport();
+            informe = new Informe_1();
+            DataTable table1to4 = managequery_aux.Consulta1();
+            informe.Database.Tables["Consultas1al4"].SetDataSource((DataTable)table1to4);
+
+            reporter.showReport(informe);
+            reporter.ShowReporter();
+            restartIndex();
+        }
+        private void click_btn_consulta2(object sender, RoutedEventArgs e)
+        {
+            if (cb_year_report.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe seleccionar un año", "Ningún año seleccionado");
+                return;
+            }
+            restartReport();
+            informe = new Informe_1();
+            string year_selected = cb_year_report.SelectedValue.ToString();
+            DataTable table1to4 = managequery_aux.Consulta2(year_selected);
+            informe.Database.Tables["Consultas1al4"].SetDataSource((DataTable)table1to4);
+
+            reporter.showReport(informe);
+            reporter.ShowReporter();
+            restartIndex();
+        }
+
+        private void click_btn_consulta3(object sender, RoutedEventArgs e)
+        {
+            if (cb_year_report.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe seleccionar un año", "Ningún año seleccionado");
+                return;
+            }
+            restartReport();
+            informe = new Informe_1();
+            string year_selected = cb_year_report.SelectedValue.ToString();
+            DataTable table1to4 = managequery_aux.Consulta3(year_selected);
+            informe.Database.Tables["Consultas1al4"].SetDataSource((DataTable)table1to4);
+
+            reporter.showReport(informe);
+            reporter.ShowReporter();
+            restartIndex();
+        }
+
+        private void click_btn_consulta4(object sender, RoutedEventArgs e)
+        {
+            if (cb_edition_report.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe seleccionar una edición", "Ninguna edición seleccionada");
+                return;
+            }
+            restartReport();
+            informe = new Informe_1();
+            int edition_selected = Convert.ToInt32(cb_edition_report.SelectedValue.ToString());
+            DataTable table1to4 = managequery_aux.Consulta4(edition_selected);
+            informe.Database.Tables["Consultas1al4"].SetDataSource((DataTable)table1to4);
+
+            reporter.showReport(informe);
+            reporter.ShowReporter();
+            restartIndex();
+        }
+
+        private void click_btn_consulta5(object sender, RoutedEventArgs e)
+        {
+            if (cb_edition_report.SelectedIndex == -1 || cb_year_report.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe seleccionar una edición y un año", "Ninguna edición y/o año seleccionado");
+                return;
+            }
+            restartReport();
+            informe2 = new Informe_2();
+            int edition_selected = Convert.ToInt32(cb_edition_report.SelectedValue.ToString());
+            string year_selected = cb_year_report.SelectedValue.ToString();
+            DataTable table5 = managequery_aux.Consulta5(edition_selected, year_selected);
+            informe2.Database.Tables["Consulta5"].SetDataSource((DataTable)table5);
+
+            reporter.showReport(informe2);
+            reporter.ShowReporter();
+            restartIndex();
+        }
+        private void restartReport()
+        {
+            reporter = new ReportViewer();
+        }
+        private void restartIndex()
+        {
+            cb_edition_report.SelectedIndex = -1;
+            cb_year_report.SelectedIndex = -1;
         }
     }
 }

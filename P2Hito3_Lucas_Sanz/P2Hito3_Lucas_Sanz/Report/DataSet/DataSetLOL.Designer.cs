@@ -589,7 +589,9 @@ namespace P2Hito3_Lucas_Sanz.Report.DataSet {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class Consulta5DataTable : global::System.Data.TypedTableBase<Consulta5Row> {
             
-            private global::System.Data.DataColumn columnTorneo;
+            private global::System.Data.DataColumn columnPosicion;
+            
+            private global::System.Data.DataColumn columnEquipo;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -626,9 +628,17 @@ namespace P2Hito3_Lucas_Sanz.Report.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn TorneoColumn {
+            public global::System.Data.DataColumn PosicionColumn {
                 get {
-                    return this.columnTorneo;
+                    return this.columnPosicion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn EquipoColumn {
+                get {
+                    return this.columnEquipo;
                 }
             }
             
@@ -669,10 +679,11 @@ namespace P2Hito3_Lucas_Sanz.Report.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Consulta5Row AddConsulta5Row(string Torneo) {
+            public Consulta5Row AddConsulta5Row(string Posicion, string Equipo) {
                 Consulta5Row rowConsulta5Row = ((Consulta5Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Torneo};
+                        Posicion,
+                        Equipo};
                 rowConsulta5Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowConsulta5Row);
                 return rowConsulta5Row;
@@ -695,14 +706,17 @@ namespace P2Hito3_Lucas_Sanz.Report.DataSet {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnTorneo = base.Columns["Torneo"];
+                this.columnPosicion = base.Columns["Posicion"];
+                this.columnEquipo = base.Columns["Equipo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnTorneo = new global::System.Data.DataColumn("Torneo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTorneo);
+                this.columnPosicion = new global::System.Data.DataColumn("Posicion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPosicion);
+                this.columnEquipo = new global::System.Data.DataColumn("Equipo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEquipo);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -944,30 +958,58 @@ namespace P2Hito3_Lucas_Sanz.Report.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Torneo {
+            public string Posicion {
                 get {
                     try {
-                        return ((string)(this[this.tableConsulta5.TorneoColumn]));
+                        return ((string)(this[this.tableConsulta5.PosicionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Torneo\' de la tabla \'Consulta5\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Posicion\' de la tabla \'Consulta5\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableConsulta5.TorneoColumn] = value;
+                    this[this.tableConsulta5.PosicionColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsTorneoNull() {
-                return this.IsNull(this.tableConsulta5.TorneoColumn);
+            public string Equipo {
+                get {
+                    try {
+                        return ((string)(this[this.tableConsulta5.EquipoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Equipo\' de la tabla \'Consulta5\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableConsulta5.EquipoColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetTorneoNull() {
-                this[this.tableConsulta5.TorneoColumn] = global::System.Convert.DBNull;
+            public bool IsPosicionNull() {
+                return this.IsNull(this.tableConsulta5.PosicionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPosicionNull() {
+                this[this.tableConsulta5.PosicionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsEquipoNull() {
+                return this.IsNull(this.tableConsulta5.EquipoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetEquipoNull() {
+                this[this.tableConsulta5.EquipoColumn] = global::System.Convert.DBNull;
             }
         }
         

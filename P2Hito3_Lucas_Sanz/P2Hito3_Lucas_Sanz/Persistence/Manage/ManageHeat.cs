@@ -17,9 +17,9 @@ namespace P2Hito3_Lucas_Sanz.Persistence.Manage
         /// </summary>
         /// <param name="t">Actual tournament</param>
         /// <param name="te">Actual team playing that tournament</param>
-        public void insertHeat(Tournament t, Team te)
+        public void insertHeat(int idTournament, Team te)
         {
-            DBBroker.getAgent().executeSQL($"insert into leagueoflegends.heat (idTournament, idTeam) values ('{t.idTournament}','{te.idTeam}');");
+            DBBroker.getAgent().executeSQL($"insert into leagueoflegends.heat (idTournament, idTeam) values ('{idTournament}','{te.idTeam}');");
         }
     }
 }

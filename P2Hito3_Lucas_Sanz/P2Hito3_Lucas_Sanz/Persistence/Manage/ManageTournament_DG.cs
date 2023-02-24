@@ -23,14 +23,16 @@ namespace P2Hito3_Lucas_Sanz.Persistence.Manage
             string name_p;
             string location_p;
             int posicion;
+            int idTournament;
 
             foreach (List<Object> objP in team_object)
             {
+                idTournament = Convert.ToInt32(objP[0].ToString());
                 name_p = objP[1].ToString();
                 posicion = (Convert.ToInt32(objP[2]));
                 location_p = country_list[posicion].name;
 
-                Tournament_DG to = new Tournament_DG(name_p, location_p);
+                Tournament_DG to = new Tournament_DG(name_p, location_p, idTournament);
 
                 tournament_list.Add(to);
             }

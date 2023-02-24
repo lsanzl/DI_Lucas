@@ -35,7 +35,7 @@ namespace P2Hito3_Lucas_Sanz.Model
         public Tournament(string name, string year, int idCountry)
         {
             this.manage_tournament = new ManageTournament();
-            this.idTournament = this.manage_tournament.countTournament();
+            this.idTournament = this.manage_tournament.getidTournament(this);
             this.year = Convert.ToInt32(year);
             this.name = name;
             this.idCountry = idCountry;
@@ -66,6 +66,7 @@ namespace P2Hito3_Lucas_Sanz.Model
             List<int> num_used = new List<int>();
             teams_totals = team_aux.readTeams();
             int num_team = 0;
+            int idTournament = this.manage_tournament.getidTournament(this);
             Boolean repeat = false;
             string traza_inicial = "16 seleccionados para octavos:\n";
 
@@ -78,7 +79,7 @@ namespace P2Hito3_Lucas_Sanz.Model
                 }
                 num_used.Add(num_team);
                 teams_octavos.Add(teams_totals[num_team]);
-                manageheat_aux.insertHeat(this, teams_totals[num_team]);
+                manageheat_aux.insertHeat(idTournament, teams_totals[num_team]);
                 repeat = false;
                 traza_inicial += teams_totals[num_team].name + "\n";
             }
@@ -141,10 +142,12 @@ namespace P2Hito3_Lucas_Sanz.Model
             if (playMatch(team1, team2, 1))
             {
                 traza_ganadores += team1.name;
+                this.manage_tournament.insertEdition(this, team1);
             }
             else
             {
                 traza_ganadores += team2.name;
+                this.manage_tournament.insertEdition(this, team2);
             }
             MessageBox.Show(traza_juegan);
             MessageBox.Show(traza_ganadores);

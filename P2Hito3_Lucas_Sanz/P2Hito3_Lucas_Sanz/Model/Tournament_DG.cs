@@ -12,17 +12,19 @@ namespace P2Hito3_Lucas_Sanz.Model
         Country country_aux = new Country();
         public string location { get; set; }
         public string name { get; set; }
+        public int idTournamentDG { get; set; } 
         public ManageTournament_DG manage_tournament_dg { get; set; }
         /// <summary>
         /// Constructor of tournament to data grid
         /// </summary>
         /// <param name="name"> Tournaments name </param>
         /// <param name="location"> Tournament's location </param>
-        public Tournament_DG(string name, string location)
+        public Tournament_DG(string name, string location, int idTournamentDG)
         {
             this.name = name;
             this.location = location;
             this.manage_tournament_dg = new ManageTournament_DG();
+            this.idTournamentDG = idTournamentDG;
         }
         /// <summary>
         /// Void constructor of tournament to data grid

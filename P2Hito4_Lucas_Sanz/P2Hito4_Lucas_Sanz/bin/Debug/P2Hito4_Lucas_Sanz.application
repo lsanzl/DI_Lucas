@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="P2Hito4_Lucas_Sanz.exe.manifest" size="24277">
+    <dependentAssembly dependencyType="install" codebase="P2Hito4_Lucas_Sanz.exe.manifest" size="24915">
       <assemblyIdentity name="P2Hito4_Lucas_Sanz.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>55L9Vqpf7ouFGMVMQOz6QzLcMIWGqZ5tHZHT+EjIV9w=</dsig:DigestValue>
+        <dsig:DigestValue>HYlF9lWhi20/JugxdHr1sXMRfwN5g8JFocgNWwAlBqM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

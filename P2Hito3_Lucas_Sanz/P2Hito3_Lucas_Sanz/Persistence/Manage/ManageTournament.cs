@@ -34,7 +34,7 @@ namespace P2Hito3_Lucas_Sanz.Persistence.Manage
         public Boolean insertMatch(Team team1, Team team2, int kills1, int assists1, int kills2, int assists2, int round, Tournament tournament)
         {
             DBBroker.getAgent().executeSQL("alter table leagueoflegends.match AUTO_INCREMENT = 1;");
-            int idTournament_actual = countTournament();
+            int idTournament_actual = tournament.manage_tournament.getidTournament(tournament);
             Boolean team1winner = false;
 
             if (kills1 > kills2)
@@ -64,6 +64,11 @@ namespace P2Hito3_Lucas_Sanz.Persistence.Manage
         {
             DBBroker.getAgent().executeSQL($"insert into leagueoflegends.play (idTeam, idMatch, kills, assists) values ('{team.idTeam}','{idMatch}', '{kills}', '{assists}');");
         }
+        public void insertEdition(Tournament t, Team te)
+        {
+            int idTournament_actual = t.manage_tournament.getidTournament(t);
+            DBBroker.getAgent().executeSQL($"insert into leagueoflegends.edition (idTournament, year, winnerOfEdition) values ('{idTournament_actual}','{t.year}','{te.idTeam}');");
+        }
         /// <summary>
         /// Method to get number of tournaments created
         /// </summary>
@@ -83,6 +88,17 @@ namespace P2Hito3_Lucas_Sanz.Persistence.Manage
             List<Object> list_matchs = new List<Object>();
             list_matchs = DBBroker.getAgent().readSQL("select * from leagueoflegends.match;");
             return list_matchs.Count;
+        }
+        public int getidTournament(Tournament t)
+        {
+            List<Object> list_tour = new List<Object>();
+            int id = -1;
+            list_tour = DBBroker.getAgent().readSQL($"select idTournament from leagueoflegends.tournament where name='{t.name}';");
+            foreach(List<Object> tour in list_tour)
+            {
+                id = Convert.ToInt32(tour[0].ToString());
+            }
+            return id;
         }
     }
 }

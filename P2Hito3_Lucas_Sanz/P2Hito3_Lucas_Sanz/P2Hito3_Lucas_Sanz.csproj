@@ -103,7 +103,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Persistence\Manage\ManageEdition.cs" />
     <Compile Include="Persistence\Manage\ManageHeat.cs" />
+    <Compile Include="Persistence\Manage\ManageQuery.cs" />
+    <Compile Include="Report\DataSet\DataSetLOL.cs">
+      <DependentUpon>DataSetLOL.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Report\DataSet\DataSetLOL.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

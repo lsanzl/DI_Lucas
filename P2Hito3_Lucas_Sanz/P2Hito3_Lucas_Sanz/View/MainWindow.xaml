@@ -73,7 +73,21 @@
                 </Grid>
             </TabItem>
             <TabItem Header="REPORT" Height="40">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Button Name="btn_consulta1" Content="Consulta 1" HorizontalAlignment="Left" Margin="59,63,0,0" VerticalAlignment="Top" Click="click_btn_consulta1" Height="30" Width="85"/>
+                    <Button Name="btn_consulta2" Content="Consulta 2" HorizontalAlignment="Left" Margin="59,130,0,0" VerticalAlignment="Top" Click="click_btn_consulta2" Height="30" Width="85"/>
+                    <Button Name="btn_consulta3" Content="Consulta 3" HorizontalAlignment="Left" Margin="59,194,0,0" VerticalAlignment="Top" Click="click_btn_consulta3" Height="30" Width="85"/>
+                    <Button Name="btn_consulta4" Content="Consulta 4" HorizontalAlignment="Left" Margin="59,263,0,0" VerticalAlignment="Top" Click="click_btn_consulta4" Height="30" Width="85"/>
+                    <Button Name="btn_consulta5" Content="Consulta 5" HorizontalAlignment="Left" Margin="59,326,0,0" VerticalAlignment="Top" Click="click_btn_consulta5" Height="30" Width="85"/>
+                    <ComboBox Name="cb_year_report" HorizontalAlignment="Left" Margin="395,164,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Name="lbl_year_report" Content="YEAR" HorizontalAlignment="Center" Margin="0,162,0,0" VerticalAlignment="Top"/>
+                    <ComboBox Name="cb_edition_report" HorizontalAlignment="Left" Margin="395,231,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Name="lbl_edition_report" Content="EDITION" HorizontalAlignment="Center" Margin="0,229,0,0" VerticalAlignment="Top"/>
+                    <Label Name="lbl_requires_year2" Content="(requires year)" HorizontalAlignment="Left" Margin="163,132,0,0" VerticalAlignment="Top" Height="26" FontSize="10" FontStyle="Italic"/>
+                    <Label Name="lbl_requires_edition3" Content="(requires year)" HorizontalAlignment="Left" Margin="163,196,0,0" VerticalAlignment="Top" Height="26" FontSize="10" FontStyle="Italic"/>
+                    <Label x:Name="lbl_requires_edition4" Content="(requires edition)" HorizontalAlignment="Left" Margin="163,265,0,0" VerticalAlignment="Top" Height="26" FontSize="10" FontStyle="Italic"/>
+                    <Label x:Name="lbl_requires_edition5" Content="(requires edition and year)" HorizontalAlignment="Left" Margin="163,328,0,0" VerticalAlignment="Top" Height="26" FontSize="10" FontStyle="Italic"/>
+                </Grid>
             </TabItem>
         </TabControl>
 
