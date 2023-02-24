@@ -64,6 +64,11 @@ namespace P2Hito3_Lucas_Sanz.Persistence.Manage
         {
             DBBroker.getAgent().executeSQL($"insert into leagueoflegends.play (idTeam, idMatch, kills, assists) values ('{team.idTeam}','{idMatch}', '{kills}', '{assists}');");
         }
+        /// <summary>
+        /// Method to insert Edition
+        /// </summary>
+        /// <param name="t">Tournament to get iD</param>
+        /// <param name="te">Winner team</param>
         public void insertEdition(Tournament t, Team te)
         {
             int idTournament_actual = t.manage_tournament.getidTournament(t);
@@ -89,6 +94,11 @@ namespace P2Hito3_Lucas_Sanz.Persistence.Manage
             list_matchs = DBBroker.getAgent().readSQL("select * from leagueoflegends.match;");
             return list_matchs.Count;
         }
+        /// <summary>
+        /// Method to get idTournament (auto increase in creation method)
+        /// </summary>
+        /// <param name="t">Tournament to get id</param>
+        /// <returns></returns>
         public int getidTournament(Tournament t)
         {
             List<Object> list_tour = new List<Object>();
