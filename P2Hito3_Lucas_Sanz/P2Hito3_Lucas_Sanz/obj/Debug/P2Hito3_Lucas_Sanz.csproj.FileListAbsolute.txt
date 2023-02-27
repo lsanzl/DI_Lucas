@@ -115,3 +115,4 @@ C:\Users\leia\OneDrive\Documentos\GitHub Local\DI_Lucas\P2Hito3_Lucas_Sanz\P2Hit
 C:\Users\leia\OneDrive\Documentos\GitHub Local\DI_Lucas\P2Hito3_Lucas_Sanz\P2Hito3_Lucas_Sanz\obj\Debug\P2Hito3_Lucas_Sanz.csproj.CopyComplete
 C:\Users\leia\OneDrive\Documentos\GitHub Local\DI_Lucas\P2Hito3_Lucas_Sanz\P2Hito3_Lucas_Sanz\obj\Debug\P2Hito3_Lucas_Sanz.exe
 C:\Users\leia\OneDrive\Documentos\GitHub Local\DI_Lucas\P2Hito3_Lucas_Sanz\P2Hito3_Lucas_Sanz\obj\Debug\P2Hito3_Lucas_Sanz.pdb
+C:\Users\leia\OneDrive\Documentos\GitHub Local\DI_Lucas\P2Hito3_Lucas_Sanz\P2Hito3_Lucas_Sanz\bin\Debug\P2Hito3_Lucas_Sanz.xml
