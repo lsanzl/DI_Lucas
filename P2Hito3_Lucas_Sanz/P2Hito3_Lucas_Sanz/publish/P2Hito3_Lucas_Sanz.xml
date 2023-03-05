@@ -1,0 +1,657 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>P2Hito3_Lucas_Sanz</name>
+    </assembly>
+    <members>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageEdition.getEditions">
+            <summary>
+            Method to get objects from DB and convert to country object
+            </summary>
+            <returns> List of countries  </returns>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageHeat">
+            <summary>
+            Class to insert values into Heat table
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageHeat.insertHeat(System.Int32,P2Hito3_Lucas_Sanz.Model.Team)">
+            <summary>
+            Inserts the heat into MySQL
+            </summary>
+            <param name="t">Actual tournament</param>
+            <param name="te">Actual team playing that tournament</param>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageQuery">
+            <summary>
+            Clase Manage query from DB
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageQuery.Consulta1">
+            <summary>
+            Last edition teams
+            </summary>
+            <returns>Result query</returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageQuery.Consulta2(System.String)">
+            <summary>
+            Winners from determinated year
+            </summary>
+            <param name="year_selected"></param>
+            <returns>Result query</returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageQuery.Consulta3(System.String)">
+            <summary>
+            Final participants from determinated year
+            </summary>
+            <param name="year_selected"></param>
+            <returns>Result query</returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageQuery.Consulta4(System.Int32)">
+            <summary>
+            Winner from the determinated year
+            </summary>
+            <param name="edition_selected"></param>
+            <returns>Result query</returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageQuery.Consulta5(System.Int32,System.String)">
+            <summary>
+            Classification from determinated tournament
+            </summary>
+            <param name="edition_selected"></param>
+            <param name="year_selected"></param>
+            <returns>Result query</returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageTeam.getTeams">
+            <summary>
+            Method to request list of teams from DB
+            </summary>
+            <returns> List of teams objects </returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageTeam.insertTeam(P2Hito3_Lucas_Sanz.Model.Team)">
+            <summary>
+            Method to insert a team object in DB
+            </summary>
+            <param name="team_insert"> Team to insert </param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageTeam.deleteTeam(P2Hito3_Lucas_Sanz.Model.Team)">
+            <summary>
+            Method to delete a selected team from DB
+            </summary>
+            <param name="team"> Team to delete </param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageCountry.getCountrys">
+            <summary>
+            Method to get objects from DB and convert to country object
+            </summary>
+            <returns> List of countries  </returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManagePlayer.insertPlayer(P2Hito3_Lucas_Sanz.Model.Player)">
+            <summary>
+            Method to insert players in DB
+            </summary>
+            <param name="p"> Player to insert </param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManagePlayer.getPlayers">
+            <summary>
+            Method to request list of players from DB
+            </summary>
+            <returns> List of players objects </returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManagePlayer.deletePlayer(P2Hito3_Lucas_Sanz.Model.Player)">
+            <summary>
+            Method to delete a selected player from DB
+            </summary>
+            <param name="player"> Player to delete </param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageTournament.insertTournament(P2Hito3_Lucas_Sanz.Model.Tournament)">
+            <summary>
+            Method to insert a tournament in DB
+            </summary>
+            <param name="tournament"> Tournament to insert </param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageTournament.insertMatch(P2Hito3_Lucas_Sanz.Model.Team,P2Hito3_Lucas_Sanz.Model.Team,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,P2Hito3_Lucas_Sanz.Model.Tournament)">
+            <summary>
+            Method to insert a match in DB, first it determinates which is the winner team
+            </summary>
+            <param name="team1"> Team 1 of match </param>
+            <param name="team2"> Team 2 of match </param>
+            <param name="kills1"> Kills of team 1 </param>
+            <param name="assists1"> Assists of team 1 </param>
+            <param name="kills2"> Kills of team 2 </param>
+            <param name="assists2"> Assists of team 2 </param>
+            <param name="round"> Number of round which is playing </param>
+            <param name="tournament"> Tournament's name is playing </param>
+            <returns> True if team 1 wins </returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageTournament.insertPlay(P2Hito3_Lucas_Sanz.Model.Team,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Method to insert results from match in DB
+            </summary>
+            <param name="team"> Team to insert stats </param>
+            <param name="kills"> Number of kills in match </param>
+            <param name="assists"> Number of assists in match </param>
+            <param name="round"> Number of round is playing </param>
+            <param name="idMatch"> ID of match is playing </param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageTournament.insertEdition(P2Hito3_Lucas_Sanz.Model.Tournament,P2Hito3_Lucas_Sanz.Model.Team)">
+            <summary>
+            Method to insert Edition
+            </summary>
+            <param name="t">Tournament to get iD</param>
+            <param name="te">Winner team</param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageTournament.countTournament">
+            <summary>
+            Method to get number of tournaments created
+            </summary>
+            <returns> Count of tournament items in DB </returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageTournament.countMatch">
+            <summary>
+            Method to get number of matches created
+            </summary>
+            <returns> Count of match items in DB </returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageTournament.getidTournament(P2Hito3_Lucas_Sanz.Model.Tournament)">
+            <summary>
+            Method to get idTournament (auto increase in creation method)
+            </summary>
+            <param name="t">Tournament to get id</param>
+            <returns></returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageTournament_DG.getTournaments">
+            <summary>
+            Method to get objects and convert to data grid tournaments
+            </summary>
+            <returns> List of tournaments to show in data grid </returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageTournament_DG.deleteTournament_DG(P2Hito3_Lucas_Sanz.Model.Tournament_DG)">
+            <summary>
+            Method to delete a tournament from DB
+            </summary>
+            <param name="tourDG"> Tournament to delete </param>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.FinalDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.SemifinalesDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.CuartosDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.ParticipantesDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.GanadorDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.FinalRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.SemifinalesRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.CuartosRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.ParticipantesRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.GanadorRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.FinalRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.SemifinalesRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.CuartosRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.ParticipantesRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.GanadorRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetLOL">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetLOL.Consulta5DataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetLOL.Consultas1al4DataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetLOL.Consultas1al4Row">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetLOL.Consulta5Row">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetLOL.Consultas1al4RowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetLOL.Consulta5RowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.View.ReportViewer">
+            <summary>
+            Lógica de interacción para ReportViewer.xaml
+            </summary>
+            <summary>
+            ReportViewer
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.View.ReportViewer.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.App">
+            <summary>
+            Lógica de interacción para App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Country.#ctor">
+            <summary>
+            Constructor of Country
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Country.#ctor(System.String)">
+            <summary>
+            Constructor of Country introducing name
+            </summary>
+            <param name="name"> Name of the country </param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Country.readCountries">
+            <summary>
+            Method that read each of the countries from DB
+            </summary>
+            <returns> List of countries </returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Player.#ctor">
+            <summary>
+            Constructor of Player
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Player.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            Constructor with params, the rest of the params are random generated
+            </summary>
+            <param name="nickName"> To identify the player </param>
+            <param name="type"> Headline or reserve </param>
+            <param name="idTeam"> ID of the team to which it belongs </param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Player.#ctor(System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Constructor with full of params
+            </summary>
+            <param name="nickName"> To identify the player </param>
+            <param name="name"> Player's name </param>
+            <param name="surname"> Player's surname </param>
+            <param name="role"> Player's role in the team </param>
+            <param name="type"> Headline or reserve </param>
+            <param name="idTeam"> ID of the team to which it belongs </param>
+            <param name="idCountry"> ID of country of birth </param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Player.insertPlayer">
+            <summary>
+            Call manage class to insert a player
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Player.readPlayers">
+            <summary>
+            Call manage class to get list of players from DB
+            </summary>
+            <returns> List of players </returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Player.readPlayers(System.String)">
+            <summary>
+            Method which check if there are 12 players (limit) in a team
+            </summary>
+            <param name="team"> Team to check </param>
+            <returns> True if there are less than 12 </returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Player.readPlayers(System.String,System.String)">
+            <summary>
+            Method which check if there are 5 headlines in the team (limit of headlines)
+            </summary>
+            <param name="role"> Specify player's role </param>
+            <param name="idTeam"> Team to check </param>
+            <returns></returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Player.deletePlayer">
+            <summary>
+            Call manage to delete a player
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Team.#ctor">
+            <summary>
+            Constructor of Teams
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Team.#ctor(System.String,System.String)">
+            <summary>
+            Constructor that needs name and image source
+            </summary>
+            <param name="name"> Team's name </param>
+            <param name="imageSrc"> Team's icon </param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Team.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            Constructor that introduce full user params
+            </summary>
+            <param name="idTeam"> Team's ID </param>
+            <param name="name"> Team's name </param>
+            <param name="imageSrc"> Team's icon </param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Team.readTeams">
+            <summary>
+            Method which get list of teams from DB
+            </summary>
+            <returns> List of teams </returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Team.insertTeam">
+            <summary>
+            Call manage to insert teams
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Team.deleteTeam">
+            <summary>
+            Call manage to delete teams
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Tournament.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            Constructor to build tournaments
+            </summary>
+            <param name="name"> Tournament's name </param>
+            <param name="year"> Tournament's year </param>
+            <param name="idCountry"> Tournament's country </param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Tournament.insertTournament">
+            <summary>
+            Calls manage to insert tournaments
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Tournament.startTournament">
+            <summary>
+            Method to initialize the tournament
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Tournament.tournamentList">
+            <summary>
+            Method to random select 16 teams which play the tournament
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Tournament.playRound(System.Collections.Generic.List{P2Hito3_Lucas_Sanz.Model.Team},System.Collections.Generic.List{P2Hito3_Lucas_Sanz.Model.Team},System.Int32)">
+            <summary>
+            Method that makes random matchs
+            </summary>
+            <param name="ronda_actual"> List of teams of actual round </param>
+            <param name="ronda_next"> List of teams of next round </param>
+            <param name="round"> Number of actual round </param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Tournament.playFinal(System.Collections.Generic.List{P2Hito3_Lucas_Sanz.Model.Team})">
+            <summary>
+            Method to play final round
+            </summary>
+            <param name="ronda_final"> List of two teams which play final round </param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Tournament.playMatch(P2Hito3_Lucas_Sanz.Model.Team,P2Hito3_Lucas_Sanz.Model.Team,System.Int32)">
+            <summary>
+            Method which generates random kills, assists and the winner
+            </summary>
+            <param name="team1"> Team 1 of match </param>
+            <param name="team2"> Team 2 of match </param>
+            <param name="round"> Number of round </param>
+            <returns> True if team 1 wins the match </returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Tournament.checkRepeat(System.Collections.Generic.List{System.Int32},System.Int32)">
+            <summary>
+            Method which checks that teams don't repeat in list match
+            </summary>
+            <param name="int_check"> List of IDs already introduced </param>
+            <param name="num_check"> Num to check </param>
+            <returns> True if number doesn't exist in list </returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Tournament_DG.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            Constructor of tournament to data grid
+            </summary>
+            <param name="name"> Tournaments name </param>
+            <param name="location"> Tournament's location </param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Tournament_DG.#ctor">
+            <summary>
+            Void constructor of tournament to data grid
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Tournament_DG.readTournaments">
+            <summary>
+            Method to get list of tournaments from DB
+            </summary>
+            <returns> List of tournaments </returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Model.Tournament_DG.deleteTournamentDG">
+            <summary>
+            Method to call manage method to delete a tournament
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.#ctor">
+            <summary>
+            Main method
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.initializeCB">
+            <summary>
+            Method to initialize combo boxes and data grids
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.clearFieldsPlayer">
+            <summary>
+            Method to clear and deselect each option related to players
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.clearFieldsTeam">
+            <summary>
+            Method to clear and deselect each option related to teams
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.clearFieldsTournament(System.Boolean)">
+            <summary>
+            Method to clear and deselect each option related to tournaments
+            </summary>
+            <param name="txt_fields"> True to clear every fields, false to clear only data grid </param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.click_btn_add(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Method to call insert method of players, first it checks all parameters are ready and that teams are not full
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.click_btn_delete(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Method to call delete method of players
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.click_btn_tadd(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Method to call insert method of teams, first it checks fields are not null
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.click_btn_tdelete(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Method to call delete method of teams
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.click_btn_create(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Method to call creation method of tournaments, first it checks fields are not null
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.click_btn_start(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Method to initialize tournament engine
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.click_btn_delete_tournament(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Method to call delete method of tournaments
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.click_btn_consulta1(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Method to call query 1 and show new window with reporter view
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.click_btn_consulta2(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Method to call query 2 and show new window with reporter view
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.click_btn_consulta3(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Method to call query 3 and show new window with reporter view
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.click_btn_consulta4(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Method to call query 4 and show new window with reporter view
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.click_btn_consulta5(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Method to call query 5 and show new window with reporter view
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.restartReport">
+            <summary>
+            Restarts the report.
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.restartIndex">
+            <summary>
+            Restarts the index.
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Properties.Resources">
+            <summary>
+              Clase de recurso fuertemente tipado para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:P2Hito3_Lucas_Sanz.Properties.Resources.ResourceManager">
+            <summary>
+              Devuelve la instancia ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:P2Hito3_Lucas_Sanz.Properties.Resources.Culture">
+            <summary>
+              Invalida la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos usando esta clase de recursos fuertemente tipados.
+            </summary>
+        </member>
+    </members>
+</doc>

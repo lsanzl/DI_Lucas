@@ -21,11 +21,11 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Consulta5" msprop:Generator_RowEvHandlerName="Consulta5RowChangeEventHandler" msprop:Generator_RowDeletedName="Consulta5RowDeleted" msprop:Generator_RowDeletingName="Consulta5RowDeleting" msprop:Generator_RowEvArgName="Consulta5RowChangeEvent" msprop:Generator_TablePropName="Consulta5" msprop:Generator_RowChangedName="Consulta5RowChanged" msprop:Generator_RowChangingName="Consulta5RowChanging" msprop:Generator_TableClassName="Consulta5DataTable" msprop:Generator_RowClassName="Consulta5Row" msprop:Generator_TableVarName="tableConsulta5" msprop:Generator_UserTableName="Consulta5">
+        <xs:element name="Consulta5" msprop:Generator_RowEvHandlerName="Consulta5RowChangeEventHandler" msprop:Generator_RowDeletedName="Consulta5RowDeleted" msprop:Generator_RowDeletingName="Consulta5RowDeleting" msprop:Generator_RowEvArgName="Consulta5RowChangeEvent" msprop:Generator_TablePropName="Consulta5" msprop:Generator_RowChangedName="Consulta5RowChanged" msprop:Generator_UserTableName="Consulta5" msprop:Generator_RowChangingName="Consulta5RowChanging" msprop:Generator_RowClassName="Consulta5Row" msprop:Generator_TableClassName="Consulta5DataTable" msprop:Generator_TableVarName="tableConsulta5">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Posicion" msprop:Generator_ColumnPropNameInRow="Posicion" msprop:Generator_ColumnPropNameInTable="PosicionColumn" msprop:Generator_ColumnVarNameInTable="columnPosicion" msprop:Generator_UserColumnName="Posicion" type="xs:string" minOccurs="0" />
-              <xs:element name="Equipo" msprop:Generator_ColumnPropNameInRow="Equipo" msprop:Generator_ColumnPropNameInTable="EquipoColumn" msprop:Generator_ColumnVarNameInTable="columnEquipo" msprop:Generator_UserColumnName="Equipo" type="xs:string" minOccurs="0" />
+              <xs:element name="Posicion" msprop:Generator_ColumnPropNameInTable="PosicionColumn" msprop:Generator_ColumnPropNameInRow="Posicion" msprop:Generator_UserColumnName="Posicion" msprop:Generator_ColumnVarNameInTable="columnPosicion" type="xs:string" minOccurs="0" />
+              <xs:element name="Equipo" msprop:Generator_ColumnPropNameInTable="EquipoColumn" msprop:Generator_ColumnPropNameInRow="Equipo" msprop:Generator_UserColumnName="Equipo" msprop:Generator_ColumnVarNameInTable="columnEquipo" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

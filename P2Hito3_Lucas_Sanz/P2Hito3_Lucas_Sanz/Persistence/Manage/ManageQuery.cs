@@ -1,4 +1,5 @@
-﻿using P2Hito3_Lucas_Sanz.Report;
+﻿using Org.BouncyCastle.Crypto.Modes.Gcm;
+using P2Hito3_Lucas_Sanz.Report;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,13 +12,20 @@ using System.Windows.Forms;
 
 namespace P2Hito3_Lucas_Sanz.Persistence.Manage
 {
+    /// <summary>
+    /// Clase Manage query from DB
+    /// </summary>
     public class ManageQuery
     {
         DataTable table1to4;
         DataTable table5;
         DataRow dr;
+        DataRow drw;
         List<Object> list_datos;
-
+        /// <summary>
+        /// Last edition teams
+        /// </summary>
+        /// <returns>Result query</returns>
         public DataTable Consulta1()
         {
             table1to4 = new DataTable("Consultas1al4");
@@ -43,6 +51,11 @@ namespace P2Hito3_Lucas_Sanz.Persistence.Manage
             
             return table1to4;
         }
+        /// <summary>
+        /// Winners from determinated year
+        /// </summary>
+        /// <param name="year_selected"></param>
+        /// <returns>Result query</returns>
         public DataTable Consulta2(string year_selected)
         {
             table1to4 = new DataTable("Consultas1al4");
@@ -69,6 +82,11 @@ namespace P2Hito3_Lucas_Sanz.Persistence.Manage
 
             return table1to4;
         }
+        /// <summary>
+        /// Final participants from determinated year
+        /// </summary>
+        /// <param name="year_selected"></param>
+        /// <returns>Result query</returns>
         public DataTable Consulta3(string year_selected)
         {
             table1to4 = new DataTable("Consultas1al4");
@@ -98,6 +116,11 @@ namespace P2Hito3_Lucas_Sanz.Persistence.Manage
 
             return table1to4;
         }
+        /// <summary>
+        /// Winner from the determinated year
+        /// </summary>
+        /// <param name="edition_selected"></param>
+        /// <returns>Result query</returns>
         public DataTable Consulta4(int edition_selected)
         {
             table1to4 = new DataTable("Consultas1al4");
@@ -126,11 +149,16 @@ namespace P2Hito3_Lucas_Sanz.Persistence.Manage
 
             return table1to4;
         }
+        /// <summary>
+        /// Classification from determinated tournament
+        /// </summary>
+        /// <param name="edition_selected"></param>
+        /// <param name="year_selected"></param>
+        /// <returns>Result query</returns>
         public DataTable Consulta5(int edition_selected, string year_selected)
         {
             table5 = new DataTable("Consulta5");
 
-            table5.Columns.Add("Posicion");
             table5.Columns.Add("Equipo");
 
 
@@ -141,12 +169,65 @@ namespace P2Hito3_Lucas_Sanz.Persistence.Manage
                                             and e.year={year_selected} 
                                             and m.idTournament={edition_selected} 
                                             order by m.round;");
-            int contador = 1;
+            int contador = 0;
 
             foreach (List<Object> datos in list_datos)
             {
+                if (contador == 0)
+                {
+                    dr = table5.NewRow();
+                    dr["Equipo"] = "GANADOR";
+                    table5.Rows.Add(dr);
+                    dr = table5.NewRow();
+                    dr["Equipo"] = datos[0].ToString(); ;
+                    table5.Rows.Add(dr);
+                    dr = table5.NewRow();
+                    dr["Equipo"] = "";
+                    table5.Rows.Add(dr);
+                    dr = table5.NewRow();
+                    dr["Equipo"] = "FINAL";
+                    table5.Rows.Add(dr);
+                    dr = table5.NewRow();
+                    dr["Equipo"] = "";
+                    table5.Rows.Add(dr);
+                }
+                if (contador == 2)
+                {
+                    dr = table5.NewRow();
+                    dr["Equipo"] = "";
+                    table5.Rows.Add(dr);
+                    dr = table5.NewRow();
+                    dr["Equipo"] = "SEMIFINALES";
+                    table5.Rows.Add(dr);
+                    dr = table5.NewRow();
+                    dr["Equipo"] = "";
+                    table5.Rows.Add(dr);
+                }
+                if (contador == 6)
+                {
+                    dr = table5.NewRow();
+                    dr["Equipo"] = "";
+                    table5.Rows.Add(dr);
+                    dr = table5.NewRow();
+                    dr["Equipo"] = "CUARTOS";
+                    table5.Rows.Add(dr);
+                    dr = table5.NewRow();
+                    dr["Equipo"] = "";
+                    table5.Rows.Add(dr);
+                }
+                if (contador == 14)
+                {
+                    dr = table5.NewRow();
+                    dr["Equipo"] = "";
+                    table5.Rows.Add(dr);
+                    dr = table5.NewRow();
+                    dr["Equipo"] = "OCTAVOS";
+                    table5.Rows.Add(dr);
+                    dr = table5.NewRow();
+                    dr["Equipo"] = "";
+                    table5.Rows.Add(dr);
+                }
                 dr = table5.NewRow();
-                dr["Posicion"] = contador;
                 contador++;
                 dr["Equipo"] = datos[0].ToString();
                 table5.Rows.Add(dr);

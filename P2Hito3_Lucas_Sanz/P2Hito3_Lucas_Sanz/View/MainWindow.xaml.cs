@@ -286,7 +286,11 @@ namespace P2Hito3_Lucas_Sanz
             clearFieldsTournament(true);
             initializeCB();
         }
-
+        /// <summary>
+        /// Method to call query 1 and show new window with reporter view
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void click_btn_consulta1(object sender, RoutedEventArgs e)
         {
             restartReport();
@@ -298,6 +302,11 @@ namespace P2Hito3_Lucas_Sanz
             reporter.ShowReporter();
             restartIndex();
         }
+        /// <summary>
+        /// Method to call query 2 and show new window with reporter view
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void click_btn_consulta2(object sender, RoutedEventArgs e)
         {
             if (cb_year_report.SelectedIndex == -1)
@@ -315,7 +324,11 @@ namespace P2Hito3_Lucas_Sanz
             reporter.ShowReporter();
             restartIndex();
         }
-
+        /// <summary>
+        /// Method to call query 3 and show new window with reporter view
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void click_btn_consulta3(object sender, RoutedEventArgs e)
         {
             if (cb_year_report.SelectedIndex == -1)
@@ -333,7 +346,11 @@ namespace P2Hito3_Lucas_Sanz
             reporter.ShowReporter();
             restartIndex();
         }
-
+        /// <summary>
+        /// Method to call query 4 and show new window with reporter view
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void click_btn_consulta4(object sender, RoutedEventArgs e)
         {
             if (cb_edition_report.SelectedIndex == -1)
@@ -351,7 +368,11 @@ namespace P2Hito3_Lucas_Sanz
             reporter.ShowReporter();
             restartIndex();
         }
-
+        /// <summary>
+        /// Method to call query 5 and show new window with reporter view
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void click_btn_consulta5(object sender, RoutedEventArgs e)
         {
             if (cb_edition_report.SelectedIndex == -1 || cb_year_report.SelectedIndex == -1)
@@ -363,17 +384,25 @@ namespace P2Hito3_Lucas_Sanz
             informe2 = new Informe_2();
             int edition_selected = Convert.ToInt32(cb_edition_report.SelectedValue.ToString());
             string year_selected = cb_year_report.SelectedValue.ToString();
-            DataTable table5 = managequery_aux.Consulta5(edition_selected, year_selected);
-            informe2.Database.Tables["Consulta5"].SetDataSource((DataTable)table5);
+            DataTable tabla5 = managequery_aux.Consulta5(edition_selected, year_selected);
+
+            informe2.Database.Tables["Consulta5"].SetDataSource((DataTable)tabla5);
+            
 
             reporter.showReport(informe2);
             reporter.ShowReporter();
             restartIndex();
         }
+        /// <summary>
+        /// Restarts the report.
+        /// </summary>
         private void restartReport()
         {
             reporter = new ReportViewer();
         }
+        /// <summary>
+        /// Restarts the index.
+        /// </summary>
         private void restartIndex()
         {
             cb_edition_report.SelectedIndex = -1;

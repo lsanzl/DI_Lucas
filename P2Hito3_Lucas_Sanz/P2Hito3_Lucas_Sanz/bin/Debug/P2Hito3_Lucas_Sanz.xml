@@ -22,6 +22,46 @@
             <param name="t">Actual tournament</param>
             <param name="te">Actual team playing that tournament</param>
         </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageQuery">
+            <summary>
+            Clase Manage query from DB
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageQuery.Consulta1">
+            <summary>
+            Last edition teams
+            </summary>
+            <returns>Result query</returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageQuery.Consulta2(System.String)">
+            <summary>
+            Winners from determinated year
+            </summary>
+            <param name="year_selected"></param>
+            <returns>Result query</returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageQuery.Consulta3(System.String)">
+            <summary>
+            Final participants from determinated year
+            </summary>
+            <param name="year_selected"></param>
+            <returns>Result query</returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageQuery.Consulta4(System.Int32)">
+            <summary>
+            Winner from the determinated year
+            </summary>
+            <param name="edition_selected"></param>
+            <returns>Result query</returns>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageQuery.Consulta5(System.Int32,System.String)">
+            <summary>
+            Classification from determinated tournament
+            </summary>
+            <param name="edition_selected"></param>
+            <param name="year_selected"></param>
+            <returns>Result query</returns>
+        </member>
         <member name="M:P2Hito3_Lucas_Sanz.Persistence.Manage.ManageTeam.getTeams">
             <summary>
             Method to request list of teams from DB
@@ -131,6 +171,86 @@
             Method to delete a tournament from DB
             </summary>
             <param name="tourDG"> Tournament to delete </param>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.FinalDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.SemifinalesDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.CuartosDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.ParticipantesDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.GanadorDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.FinalRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.SemifinalesRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.CuartosRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.ParticipantesRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.GanadorRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.FinalRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.SemifinalesRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.CuartosRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.ParticipantesRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetGanadores.GanadorRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
         </member>
         <member name="T:P2Hito3_Lucas_Sanz.Report.DataSet.DataSetLOL">
              <summary>
@@ -466,6 +586,51 @@
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.click_btn_consulta1(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Method to call query 1 and show new window with reporter view
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.click_btn_consulta2(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Method to call query 2 and show new window with reporter view
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.click_btn_consulta3(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Method to call query 3 and show new window with reporter view
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.click_btn_consulta4(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Method to call query 4 and show new window with reporter view
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.click_btn_consulta5(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Method to call query 5 and show new window with reporter view
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.restartReport">
+            <summary>
+            Restarts the report.
+            </summary>
+        </member>
+        <member name="M:P2Hito3_Lucas_Sanz.MainWindow.restartIndex">
+            <summary>
+            Restarts the index.
+            </summary>
         </member>
         <member name="M:P2Hito3_Lucas_Sanz.MainWindow.InitializeComponent">
             <summary>

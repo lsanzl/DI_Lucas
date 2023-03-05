@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetGanadores" targetNamespace="http://tempuri.org/DataSetGanadores.xsd" xmlns:mstns="http://tempuri.org/DataSetGanadores.xsd" xmlns="http://tempuri.org/DataSetGanadores.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetGanadores" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSetGanadores" msprop:Generator_DataSetName="DataSetGanadores">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Final" msprop:Generator_RowEvHandlerName="FinalRowChangeEventHandler" msprop:Generator_RowDeletedName="FinalRowDeleted" msprop:Generator_RowDeletingName="FinalRowDeleting" msprop:Generator_RowEvArgName="FinalRowChangeEvent" msprop:Generator_TablePropName="Final" msprop:Generator_RowChangedName="FinalRowChanged" msprop:Generator_RowChangingName="FinalRowChanging" msprop:Generator_TableClassName="FinalDataTable" msprop:Generator_RowClassName="FinalRow" msprop:Generator_TableVarName="tableFinal" msprop:Generator_UserTableName="Final">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Equipow1" msprop:Generator_ColumnPropNameInRow="Equipow1" msprop:Generator_ColumnPropNameInTable="Equipow1Column" msprop:Generator_ColumnVarNameInTable="columnEquipow1" msprop:Generator_UserColumnName="Equipow1" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Semifinales" msprop:Generator_RowEvHandlerName="SemifinalesRowChangeEventHandler" msprop:Generator_RowDeletedName="SemifinalesRowDeleted" msprop:Generator_RowDeletingName="SemifinalesRowDeleting" msprop:Generator_RowEvArgName="SemifinalesRowChangeEvent" msprop:Generator_TablePropName="Semifinales" msprop:Generator_RowChangedName="SemifinalesRowChanged" msprop:Generator_RowChangingName="SemifinalesRowChanging" msprop:Generator_TableClassName="SemifinalesDataTable" msprop:Generator_RowClassName="SemifinalesRow" msprop:Generator_TableVarName="tableSemifinales" msprop:Generator_UserTableName="Semifinales">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Equipow2" msprop:Generator_ColumnPropNameInRow="Equipow2" msprop:Generator_ColumnPropNameInTable="Equipow2Column" msprop:Generator_ColumnVarNameInTable="columnEquipow2" msprop:Generator_UserColumnName="Equipow2" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Cuartos" msprop:Generator_RowEvHandlerName="CuartosRowChangeEventHandler" msprop:Generator_RowDeletedName="CuartosRowDeleted" msprop:Generator_RowDeletingName="CuartosRowDeleting" msprop:Generator_RowEvArgName="CuartosRowChangeEvent" msprop:Generator_TablePropName="Cuartos" msprop:Generator_RowChangedName="CuartosRowChanged" msprop:Generator_RowChangingName="CuartosRowChanging" msprop:Generator_TableClassName="CuartosDataTable" msprop:Generator_RowClassName="CuartosRow" msprop:Generator_TableVarName="tableCuartos" msprop:Generator_UserTableName="Cuartos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Equipow4" msprop:Generator_ColumnPropNameInRow="Equipow4" msprop:Generator_ColumnPropNameInTable="Equipow4Column" msprop:Generator_ColumnVarNameInTable="columnEquipow4" msprop:Generator_UserColumnName="Equipow4" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Participantes" msprop:Generator_RowEvHandlerName="ParticipantesRowChangeEventHandler" msprop:Generator_RowDeletedName="ParticipantesRowDeleted" msprop:Generator_RowDeletingName="ParticipantesRowDeleting" msprop:Generator_RowEvArgName="ParticipantesRowChangeEvent" msprop:Generator_TablePropName="Participantes" msprop:Generator_RowChangedName="ParticipantesRowChanged" msprop:Generator_RowChangingName="ParticipantesRowChanging" msprop:Generator_TableClassName="ParticipantesDataTable" msprop:Generator_RowClassName="ParticipantesRow" msprop:Generator_TableVarName="tableParticipantes" msprop:Generator_UserTableName="Participantes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Participantes" msprop:Generator_ColumnPropNameInRow="Participantes" msprop:Generator_ColumnPropNameInTable="ParticipantesColumn" msprop:Generator_ColumnVarNameInTable="columnParticipantes" msprop:Generator_UserColumnName="Participantes" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Ganador" msprop:Generator_RowEvHandlerName="GanadorRowChangeEventHandler" msprop:Generator_RowDeletedName="GanadorRowDeleted" msprop:Generator_RowDeletingName="GanadorRowDeleting" msprop:Generator_RowEvArgName="GanadorRowChangeEvent" msprop:Generator_TablePropName="Ganador" msprop:Generator_RowChangedName="GanadorRowChanged" msprop:Generator_RowChangingName="GanadorRowChanging" msprop:Generator_TableClassName="GanadorDataTable" msprop:Generator_RowClassName="GanadorRow" msprop:Generator_TableVarName="tableGanador" msprop:Generator_UserTableName="Ganador">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EquipoGanador" msprop:Generator_ColumnPropNameInRow="EquipoGanador" msprop:Generator_ColumnPropNameInTable="EquipoGanadorColumn" msprop:Generator_ColumnVarNameInTable="columnEquipoGanador" msprop:Generator_UserColumnName="EquipoGanador" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
