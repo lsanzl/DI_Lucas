@@ -22,6 +22,15 @@ public class JSONConsumer
     public int price;
     public StreamWriter w;
     public StreamReader r;
+
+    public JSONConsumer()
+    {
+        if (!File.Exists(jsonfile))
+        {
+            StreamWriter jsonFile = File.CreateText("Consumer.json");
+            jsonFile.Close();
+        }
+    }
     /// <summary>
     /// Method to serialize (Json format) a Consumer object and add it to Json file
     /// </summary>
@@ -41,7 +50,7 @@ public class JSONConsumer
     public List<Consumer> ReadConsumerJson()
     {
         List<Consumer> list_consumers = new List<Consumer>();
-
+        
         foreach (string line in System.IO.File.ReadLines(jsonfile))
         {
             if (line.Length != 0)
@@ -52,4 +61,5 @@ public class JSONConsumer
         }
         return list_consumers;
     }
+    
 }
