@@ -12,9 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\leia\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\leia\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "C:\\Users\\b15-16m\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\b15-16m\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

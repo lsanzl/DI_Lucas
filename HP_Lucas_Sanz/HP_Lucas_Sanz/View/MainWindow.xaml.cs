@@ -31,6 +31,10 @@ namespace HP_Lucas_Sanz
         List<Ability> ability_list;
         List<Player> player_list;
         List<Buy> buy_list;
+        int nrows;
+        int ncolumns;
+        int rtarget;
+        int ctarget;
         public MainWindow()
         {
             b_aux = new Buy();
@@ -38,7 +42,10 @@ namespace HP_Lucas_Sanz
             p_aux = new Player();
             initial_money = 100;
             selected = false;
-            m = new Map(15, 15, 15, 15);
+            nrows = 15;
+            ncolumns = 15;
+            rtarget = 15;
+            ctarget = 15;
             
             InitializeComponent();
             initializeDataContainers();
@@ -196,7 +203,7 @@ namespace HP_Lucas_Sanz
                 MessageBox.Show("Cree al menos dos jugadores para empezar el juego", "Jugadores insuficientes");
                 return;
             }
-
+            m = new Map(nrows, ncolumns, rtarget, ctarget, g_game);
         }
     }
 }

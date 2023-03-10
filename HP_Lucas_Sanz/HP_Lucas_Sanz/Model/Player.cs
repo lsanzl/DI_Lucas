@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace HP_Lucas_Sanz.Model
 {
@@ -18,6 +19,11 @@ namespace HP_Lucas_Sanz.Model
         public int money_player { get; set; }
         public List<Ability> player_ability { get; set; }
         public ManagePlayer manage_player { get; set; }
+        public int vidas;
+        public StackPanel stackpanelPlayer { get; set; }
+        public static Boolean wand;
+        public static Boolean ray;
+        public static Boolean brain;
 
         public Player()
         {
@@ -29,8 +35,13 @@ namespace HP_Lucas_Sanz.Model
             this.nickname = nickname;
             this.avatar = avatar;
             this.money_player = money_player;
-            this.player_ability = new List<Ability>();
-            this.manage_player = new ManagePlayer();
+            player_ability = new List<Ability>();
+            manage_player = new ManagePlayer();
+            vidas = 3;
+            stackpanelPlayer = new StackPanel();
+            wand = false;
+            ray = false;
+            brain = false;
         }
         public Player(int idC, string name, string nickname, string avatar, int money_player)
         {
@@ -39,21 +50,57 @@ namespace HP_Lucas_Sanz.Model
             this.nickname = nickname;
             this.avatar = avatar;
             this.money_player = money_player;
-            this.player_ability = new List<Ability>();
-            this.manage_player = new ManagePlayer();
+            player_ability = new List<Ability>();
+            manage_player = new ManagePlayer();
+            vidas = 3;
+            stackpanelPlayer = new StackPanel();
+            wand = false;
+            ray = false;
+            brain = false;
         }
         
         public void insertPlayer()
         {
-            this.manage_player.insertPlayer(this);
+            manage_player.insertPlayer(this);
         }
         public void deletePlayer()
         {
-            this.manage_player.deletePlayer(this);
+            manage_player.deletePlayer(this);
         }
         public List<Player> getPlayers()
         {
-            return this.manage_player.getPlayers();
+            return manage_player.getPlayers();
+        }
+
+        public void checkAbilities()
+        {
+            foreach (Ability ab in player_ability)
+            {
+                if (ab.name.Equals("ray"))
+                {
+                    ray = true;
+                }
+                else if (ab.name.Equals("brain"))
+                {
+                    brain = true;
+                }
+                else
+                {
+                    wand = true;
+                }
+            }
+        }
+
+        public void addSPPlayer(Grid gridGame){}
+        {
+            Label lbl = new Label();
+            lbl.Content = this.nickname;
+            this.stackpanelPlayer.Children.Add(lbl);
+            
+        }
+        public void getRowPlayer()
+        {
+            int row = Convert.ToInt32(stackpanelPlayer.GetValue(Grid.RowProperty));
         }
     }
 }
