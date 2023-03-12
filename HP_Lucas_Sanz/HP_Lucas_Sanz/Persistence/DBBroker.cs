@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HP_Lucas_Sanz.Persistence
 {
+    /// <summary>
+    /// Clase destinada a ofrecer soporte con las interacciones con la BD de MySQL
+    /// </summary>
     public class DBBroker
     {
         private static DBBroker instance;
