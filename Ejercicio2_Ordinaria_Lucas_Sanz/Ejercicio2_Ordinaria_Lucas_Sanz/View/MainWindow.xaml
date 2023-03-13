@@ -1,0 +1,38 @@
+﻿<Window x:Class="Ejercicio2_Ordinaria_Lucas_Sanz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio2_Ordinaria_Lucas_Sanz"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FFE8E8E8" Margin="0,-30,-205,0" Width="NaN" Height="NaN">
+        <Canvas x:Name="canvas_activities" Margin="10,0,0,10" Background="#FFB1B1B1" HorizontalAlignment="Left" Width="360" Height="446" VerticalAlignment="Bottom">
+            <Button x:Name="btn_new_activity" Content="New Activity" Height="35" Width="169" HorizontalAlignment="Left" Canvas.Left="10" Canvas.Top="401" VerticalAlignment="Center" Click="btn_new_activity_Click"/>
+            <DataGrid x:Name="dg_activities"  Height="338" Canvas.Left="10" Canvas.Top="57" Width="340" HorizontalAlignment="Left" VerticalAlignment="Center" SelectionChanged="dg_activities_SelectionChanged">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name" Binding="{Binding name}" Width="*"/>
+                    <DataGridTextColumn Header="Price" Binding="{Binding price}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Label x:Name="lbl_activities" Content="Activities" Width="340" HorizontalContentAlignment="Center" FontSize="16" HorizontalAlignment="Left" Canvas.Left="10" Canvas.Top="21" VerticalAlignment="Center"/>
+            <Button x:Name="btn_new_group" Content="Create new group" Height="35" Width="166" HorizontalAlignment="Left" Canvas.Left="184" Canvas.Top="401" VerticalAlignment="Center"/>
+        </Canvas>
+        <Canvas x:Name="canvas_partners" Margin="388,0,0,10" Background="#FFB1B1B1" HorizontalAlignment="Left" Width="611" Height="446" VerticalAlignment="Bottom">
+            <Button x:Name="btn_new_partner" Content="New Partner" Height="35" Width="296" HorizontalAlignment="Center" Canvas.Left="10" Canvas.Top="401" VerticalAlignment="Top" Click="btn_new_partner_Click"/>
+            <DataGrid x:Name="dg_partners"  Height="338" Canvas.Left="10" Canvas.Top="57" Width="590" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name" Binding="{Binding name}"/>
+                    <DataGridTextColumn Header="Birth date" Binding="{Binding birthDate}" Width="*"/>
+                    <DataGridTextColumn Header="ZIP Code" Binding="{Binding zipCode}" Width="*"/>
+                    <DataGridTextColumn Header="City" Binding="{Binding city}" Width="*"/>
+                    <DataGridTextColumn Header="Province" Binding="{Binding province}" Width="*"/>
+                    <DataGridTextColumn Header="Telephone" Binding="{Binding telephone}" Width="*"/>
+                    <DataGridTextColumn Header="Bank" Binding="{Binding bank}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Label x:Name="lbl_partners" Content="Partners" Width="591" HorizontalContentAlignment="Center" FontSize="16" HorizontalAlignment="Left" Canvas.Left="10" Canvas.Top="21" VerticalAlignment="Center"/>
+            <Button x:Name="btn_assing_activity" Content="Assign Activity" Height="35" Width="281" Canvas.Left="319" Canvas.Top="400" HorizontalAlignment="Left" VerticalAlignment="Top" IsEnabled="False"/>
+        </Canvas>
+    </Grid>
+</Window>

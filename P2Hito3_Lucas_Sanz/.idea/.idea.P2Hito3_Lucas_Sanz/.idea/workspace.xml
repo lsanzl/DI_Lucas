@@ -5,48 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6546bc4-8554-466e-8583-6c4903ae316b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/.vs/JSON_Lucas_Sanz/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/.vs/JSON_Lucas_Sanz/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/.vs/JSON_Lucas_Sanz/FileContentIndex/688b0d18-c0d9-4380-8859-510467644b9e.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/.vs/JSON_Lucas_Sanz/FileContentIndex/69450276-f2fa-4635-a52d-8793fd2cef58.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/.vs/JSON_Lucas_Sanz/FileContentIndex/95120bb6-4ff4-4331-a4bb-91d0c7eec993.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/.vs/JSON_Lucas_Sanz/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/.vs/JSON_Lucas_Sanz/v17/.futdcache.v2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/.vs/JSON_Lucas_Sanz/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/.vs/JSON_Lucas_Sanz/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/.vs/ProjectEvaluation/json_lucas_sanz.metadata.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/.vs/ProjectEvaluation/json_lucas_sanz.metadata.v5.2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/.vs/ProjectEvaluation/json_lucas_sanz.projects.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/.vs/ProjectEvaluation/json_lucas_sanz.projects.v5.2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/Model/Consumer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/Model/Consumer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/Model/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/Model/Product.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/Persistence/JSONConsumer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/Persistence/JSONConsumer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/Persistence/JSONProduct.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/Persistence/JSONProduct.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/View/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/View/MainWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/View/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/View/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/bin/Debug/net6.0-windows/Consumer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/bin/Debug/net6.0-windows/Consumer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/bin/Debug/net6.0-windows/JSON_Lucas_Sanz.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/bin/Debug/net6.0-windows/JSON_Lucas_Sanz.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/bin/Debug/net6.0-windows/JSON_Lucas_Sanz.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/bin/Debug/net6.0-windows/JSON_Lucas_Sanz.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/App.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/App.g.i.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/JSON_Lucas_Sanz.designer.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/JSON_Lucas_Sanz.designer.runtimeconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/JSON_Lucas_Sanz.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/JSON_Lucas_Sanz.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/JSON_Lucas_Sanz.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/JSON_Lucas_Sanz.g.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/JSON_Lucas_Sanz.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/JSON_Lucas_Sanz.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/JSON_Lucas_Sanz_MarkupCompile.i.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/JSON_Lucas_Sanz_MarkupCompile.i.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/JSON_Lucas_Sanz_MarkupCompile.i.lref" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/JSON_Lucas_Sanz_MarkupCompile.i.lref" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/View/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/View/MainWindow.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/View/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/View/MainWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/View/MainWindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/View/MainWindow.g.i.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/ref/JSON_Lucas_Sanz.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/ref/JSON_Lucas_Sanz.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/refint/JSON_Lucas_Sanz.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON_Lucas_Sanz/JSON_Lucas_Sanz/obj/Debug/net6.0-windows/refint/JSON_Lucas_Sanz.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/Debug/net6.0-windows/App.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/Debug/net6.0-windows/App.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/Debug/net6.0-windows/P2Hito3_Lucas_Sanz.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/Debug/net6.0-windows/P2Hito3_Lucas_Sanz.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/Debug/net6.0-windows/P2Hito3_Lucas_Sanz.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/Debug/net6.0-windows/P2Hito3_Lucas_Sanz.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/Debug/net6.0-windows/P2Hito3_Lucas_Sanz.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/Debug/net6.0-windows/P2Hito3_Lucas_Sanz.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/Debug/net6.0-windows/P2Hito3_Lucas_Sanz_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/Debug/net6.0-windows/P2Hito3_Lucas_Sanz_MarkupCompile.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/Debug/net6.0-windows/P2Hito3_Lucas_Sanz_MarkupCompile.lref" beforeDir="false" afterPath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/Debug/net6.0-windows/P2Hito3_Lucas_Sanz_MarkupCompile.lref" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/Debug/net6.0-windows/View/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/Debug/net6.0-windows/View/MainWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/P2Hito3_Lucas_Sanz.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/P2Hito3_Lucas_Sanz.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/P2Hito3_Lucas_Sanz.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/P2Hito3_Lucas_Sanz.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/P2Hito3_Lucas_Sanz/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HP_Lucas_Sanz/HP_Lucas_Sanz/obj/Debug/net6.0-windows/HP_Lucas_Sanz_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../HP_Lucas_Sanz/HP_Lucas_Sanz/obj/Debug/net6.0-windows/HP_Lucas_Sanz_MarkupCompile.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HP_Lucas_Sanz/HP_Lucas_Sanz/obj/Debug/net6.0-windows/View/MainWindow.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.P2Hito3_Lucas_Sanz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.P2Hito3_Lucas_Sanz/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,9 +28,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\leia\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\leia\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\leia\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\b15-16m\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\b15-16m\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\b15-16m\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -102,6 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1676746641638</updated>
       <workItem from="1676746643751" duration="645000" />
+      <workItem from="1678697234136" duration="3315000" />
     </task>
     <servers />
   </component>
