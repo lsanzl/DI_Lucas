@@ -57,7 +57,7 @@
                     <TextBox Name="txt_nickname_player" HorizontalAlignment="Left" Margin="338,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" Height="85"/>
                     <TextBox Name="txt_avatar_player" HorizontalAlignment="Left" Margin="338,178,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180"/>
                     <Button Name="btn_create_player" Content="CREATE" HorizontalAlignment="Left" Margin="568,30,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="click_btn_create_player" RenderTransformOrigin="0.492,1.114"/>
-                    <Button Name="btn_delete_player" Content="DELETE" HorizontalAlignment="Left" Margin="25,363,0,0" VerticalAlignment="Top" Width="90" Height="30"/>
+                    <Button Name="btn_delete_player" Content="DELETE" HorizontalAlignment="Left" Margin="25,363,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="click_btn_delete_player"/>
                     <Button Name="btn_buy" Content="BUY" HorizontalAlignment="Left" Margin="338,363,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="click_btn_buy" RenderTransformOrigin="1.729,0.539"/>
                     <DataGrid Name="dg_abilities_player" Margin="338,231,194,80">
                         <DataGrid.Columns>
@@ -72,7 +72,7 @@
             </TabItem>
             <TabItem Header="GAME" Height="40" Width="80">
                 <Grid>
-                    <Grid Name="g_game" Margin="10,10,10,38" ShowGridLines="True">
+                    <Grid Name="g_game" Margin="10,10,66,85" ShowGridLines="True">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
@@ -108,8 +108,8 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                     </Grid>
-                    <Button Name="btn_start_game" Content="START" HorizontalAlignment="Left" Margin="506,401,0,0" VerticalAlignment="Top" Width="80" Height="25" Click="click_btn_start_game"/>
-                    <Button Name="btn_next" Content="NEXT" HorizontalAlignment="Left" Margin="622,401,0,0" VerticalAlignment="Top" Width="80" Height="25"/>
+                    <Button Name="btn_start_game" Content="START" HorizontalAlignment="Left" Margin="481,358,0,0" VerticalAlignment="Top" Width="80" Height="25" Click="click_btn_start_game"/>
+                    <Button x:Name="btn_next" Content="NEXT" HorizontalAlignment="Left" Margin="566,358,0,0" VerticalAlignment="Top" Width="80" Height="25" Click="click_btn_next"/>
                 </Grid>
             </TabItem>
         </TabControl>

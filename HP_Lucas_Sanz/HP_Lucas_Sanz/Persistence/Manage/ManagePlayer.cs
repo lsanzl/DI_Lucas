@@ -7,8 +7,16 @@ using System.Threading.Tasks;
 
 namespace HP_Lucas_Sanz.Persistence.Manage
 {
+    /// <summary>
+    /// Clase manager de Player para interactuar con la BD
+    /// </summary>
     public class ManagePlayer
     {
+        /// <summary>
+        /// Método que recoge todas los players de la BD
+        /// y los mete en una lista
+        /// </summary>
+        /// <returns>List: lista con los players de la BD</returns>
         public List<Player> getPlayers()
         {
             List<Object> players_objects = DBBroker.getAgent().readSQL("select * from hplucas.player;");
@@ -31,11 +39,19 @@ namespace HP_Lucas_Sanz.Persistence.Manage
             }
             return players_list;
         }
+        /// <summary>
+        /// Método que inserta un objeto Player en la BD
+        /// </summary>
+        /// <param name="ability">Player a insertar</param>
         public void insertPlayer(Player player)
         {
             DBBroker.getAgent().executeSQL("alter table hplucas.player AUTO_INCREMENT = 1;");
             DBBroker.getAgent().executeSQL($"insert into hplucas.player (name, nickname, avatar, money) values ('{player.name}','{player.nickname}','{player.avatar}','{player.money_player}');");
         }
+        /// <summary>
+        /// Método que elimina un objeto Player de la BD
+        /// </summary>
+        /// <param name="ability">Player a eliminar</param>
         public void deletePlayer(Player player)
         {
             DBBroker.getAgent().executeSQL($"delete from hplucas.player where name='{player.name}';");

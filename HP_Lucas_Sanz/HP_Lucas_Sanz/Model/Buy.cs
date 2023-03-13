@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace HP_Lucas_Sanz.Model
 {
+    /// <summary>
+    /// Clase objeto Buy
+    /// </summary>
     public class Buy
     {
         public int idC { get; set; }
@@ -15,60 +18,42 @@ namespace HP_Lucas_Sanz.Model
         public ManageBuy manage_buy { get; set; }
         public Player p_aux;
         public Ability a_aux;
+        /// <summary>
+        /// Constructor objetos Buy
+        /// </summary>
+        /// <param name="idC">Identificador jugador</param>
+        /// <param name="idA">Identificador habilidad</param>
         public Buy(int idC, int idA)
         {
             this.idC = idC;
             this.idA = idA;
             this.manage_buy = new ManageBuy();
         }
+        /// <summary>
+        /// Constructor vacío objeto Buy
+        /// </summary>
         public Buy()
         {
-            this.manage_buy = new ManageBuy();
+            manage_buy = new ManageBuy();
         }
+        /// <summary>
+        /// Método que llama al manager para recuperar lista compras
+        /// </summary>
+        /// <returns>List: lista compras</returns>
         public List<Buy> getBuys()
         {
-            List<Object> object_list = DBBroker.getAgent().readSQL("select * from hplucas.buy;");
-            List<Buy> buy_list = new List<Buy>();
-            int idA;
-            int idC;
-
-            foreach(List<Object> o in object_list)
-            {
-                idC = Convert.ToInt32(o[0]);
-                idA = Convert.ToInt32(o[1]);
-
-                Buy b = new Buy(idC, idA);
-                buy_list.Add(b);
-            }
+            List<Buy> buy_list = manage_buy.readBuy();
             return buy_list;
         }
+        /// <summary>
+        /// Método que llama al manager para recuperar lista compras de un jugador
+        /// en concreto
+        /// </summary>
+        /// <param name="player">Jugador a comprobar</param>
+        /// <returns>List: lista compras del jugador</returns>
         public List<Buy> getBuys(Player player)
         {
-            Ability a_aux = new Ability();
-            List<Object> object_list = DBBroker.getAgent().readSQL($"select * from hplucas.buy where idC='{player.idC}';");
-            List<Buy> buy_list = new List<Buy>();
-            List<Ability> ability_list = a_aux.getAbilities();
-            int idA;
-            int idC;
-
-            foreach (List<Object> o in object_list)
-            {
-                idC = Convert.ToInt32(o[0]);
-                idA = Convert.ToInt32(o[1]);
-
-                Buy b = new Buy(idC, idA);
-                buy_list.Add(b);
-            }
-            foreach (Buy b in buy_list)
-            {
-                foreach (Ability a in ability_list)
-                {
-                    if (b.idA == a.idA)
-                    {
-                        player.player_ability.Add(a);
-                    }
-                }
-            }
+            List<Buy> buy_list = manage_buy.getBuys(player);
             return buy_list;
         }
     }
