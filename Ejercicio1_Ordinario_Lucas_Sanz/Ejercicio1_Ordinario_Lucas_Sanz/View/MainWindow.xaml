@@ -1,0 +1,22 @@
+﻿<Window x:Class="Ejercicio1_Ordinario_Lucas_Sanz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio1_Ordinario_Lucas_Sanz"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="616">
+    <Grid>
+        <DataGrid Name="dg_compras" Height="NaN" Margin="10,10,14,62" Width="NaN" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="CANTIDAD" Binding="{Binding cantidad}" Width="*"/>
+                <DataGridTextColumn Header="PRODUCTO" Binding="{Binding producto}" Width="*"/>
+                <DataGridTextColumn Header="PRECIO" Binding="{Binding precioUnitario}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="btn_nuevo" Content="NUEVO" HorizontalAlignment="Left" Margin="10,390,0,0" VerticalAlignment="Top" Width="112" Click="click_btn_nuevo"/>
+        <Button Name="btn_eliminar" Content="ELIMINAR" HorizontalAlignment="Left" Margin="250,390,0,0" VerticalAlignment="Top" Width="112" Click="click_btn_eliminar"/>
+        <Button Name="btn_imprimir" Content="IMPRIMIR" HorizontalAlignment="Left" Margin="490,390,0,0" VerticalAlignment="Top" Width="112" Click="click_btn_imprimir"/>
+
+    </Grid>
+</Window>
