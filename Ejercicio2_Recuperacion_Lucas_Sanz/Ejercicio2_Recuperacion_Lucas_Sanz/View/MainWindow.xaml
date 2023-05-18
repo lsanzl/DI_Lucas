@@ -1,0 +1,31 @@
+﻿<Window x:Class="Ejercicio2_Recuperacion_Lucas_Sanz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio2_Recuperacion_Lucas_Sanz"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="524" Width="950" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="459*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Height="NaN" Margin="0,0,543,0" Width="NaN" Grid.ColumnSpan="2">
+            <Label Content="Código" HorizontalAlignment="Left" Margin="50,69,0,0" VerticalAlignment="Top"/>
+            <Label Content="Descripción" HorizontalAlignment="Left" Margin="27,121,0,0" VerticalAlignment="Top"/>
+            <Label Content="Coste" HorizontalAlignment="Left" Margin="59,169,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.152,0.632"/>
+            <Label Content="Precio venta" HorizontalAlignment="Left" Margin="24,221,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.03,0.248"/>
+            <Label Content="Observaciones" HorizontalAlignment="Left" Margin="12,271,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_codigo" HorizontalAlignment="Left" Margin="114,73,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229"/>
+            <TextBox x:Name="txt_descripcion" HorizontalAlignment="Left" Margin="114,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229"/>
+            <TextBox x:Name="txt_coste" HorizontalAlignment="Left" Margin="114,173,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229"/>
+            <TextBox x:Name="txt_precio" HorizontalAlignment="Left" Margin="114,225,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229"/>
+            <TextBox x:Name="txt_observaciones" HorizontalAlignment="Left" Margin="114,275,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229" Height="111"/>
+        </Grid>
+        <StackPanel Margin="366,0,0,0" Grid.Column="1">
+            <DataGrid x:Name="dg_productos" Width="486" Height="508"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
