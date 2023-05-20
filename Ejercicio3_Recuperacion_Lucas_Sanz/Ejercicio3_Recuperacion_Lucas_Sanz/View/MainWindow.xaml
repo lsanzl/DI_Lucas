@@ -7,6 +7,38 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <TabControl TabStripPlacement="Left">
+            <TabItem Header="ENTRADAS" Margin="-2,-2,0,-22">
+                <Grid Background="#FFE5E5E5">
+                    <Grid Margin="24,0,415,0">
+                        <DatePicker x:Name="dp_fecha" HorizontalAlignment="Center" Margin="0,171,0,0" VerticalAlignment="Top" SelectedDateChanged="selected_date"/>
+                        <ComboBox x:Name="cb_sesiones" HorizontalAlignment="Center" Margin="0,231,0,0" VerticalAlignment="Top" Width="145" SelectionChanged="selected_sesion"/>
+                        <Label Name="lbl_disponibilidad" Content="" HorizontalAlignment="Center" Margin="0,281,0,0" VerticalAlignment="Top" Width="145"/>
+                        <Label Content="Sesión:" HorizontalAlignment="Left" Margin="9,229,0,0" VerticalAlignment="Top" Width="47" FontWeight="Bold"/>
+                    </Grid>
+                    <Grid Margin="353,0,63,0">
+                        <TextBox x:Name="txt_edad" HorizontalAlignment="Center" Margin="0,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="126" Height="20" TextChanged="changed_text_edad"/>
+                        <Label x:Name="lbl_precio" Content="" HorizontalAlignment="Center" Margin="0,191,0,0" VerticalAlignment="Top" Width="126"/>
+                        <Button x:Name="btn_comprar" Content="Comprar entrada" HorizontalAlignment="Center" Margin="0,242,0,0" VerticalAlignment="Top" Width="126" FontWeight="Bold" Click="click_comprar"/>
+                        <Label Content="Edad:" HorizontalAlignment="Left" Margin="36,143,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="ESTADÍSTICAS" Margin="-2,24,-2,-46">
+                <Grid Background="#FFE5E5E5">
+                    <DatePicker Name="dp_fecha_estadistica" HorizontalAlignment="Left" Margin="71,84,0,0" VerticalAlignment="Top" SelectedDateChanged="change_fecha_estadistica"/>
+                    <ComboBox Name="cb_sesion_estadistica" HorizontalAlignment="Left" Margin="71,142,0,0" VerticalAlignment="Top" Width="145"/>
+                    <Label Content="Sesión:" HorizontalAlignment="Left" Margin="19,140,0,0" VerticalAlignment="Top" Width="52" FontWeight="Bold"/>
+                    <Button Name="btn_mostrar" Content="Mostrar datos" HorizontalAlignment="Left" Margin="132,194,0,0" VerticalAlignment="Top" FontWeight="Bold" Click="click_mostrar"/>
+                    <TextBox Name="txt_datos" HorizontalAlignment="Left" Margin="279,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="241" Height="130" IsReadOnly="true"/>
+                    <ComboBox Name="cb_mes" HorizontalAlignment="Left" Margin="71,291,0,0" VerticalAlignment="Top" Width="144"/>
+                    <Label Content="Mes:" HorizontalAlignment="Left" Margin="19,289,0,0" VerticalAlignment="Top" Width="52" FontWeight="Bold"/>
+                    <ComboBox Name="cb_año" HorizontalAlignment="Left" Margin="71,332,0,0" VerticalAlignment="Top" Width="144"/>
+                    <Label Content="Año:" HorizontalAlignment="Left" Margin="19,330,0,0" VerticalAlignment="Top" Width="52" FontWeight="Bold"/>
+                    <Button x:Name="btn_recaudacion" Content="Calcular recaudación" HorizontalAlignment="Left" Margin="94,374,0,0" VerticalAlignment="Top" FontWeight="Bold" Click="click_recaudacion"/>
+                    <TextBox Name="txt_recaudacion" HorizontalAlignment="Left" Margin="255,374,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="true"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
