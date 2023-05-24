@@ -41,5 +41,15 @@ namespace Extraordinario2_Ejercicio1_DI_Lucas_Sanz.Persistence.Manager
             }
             return listaClase;
         }
+        public Boolean checkRegistro(Clase1 c)
+        {
+            List<Object> listaAux = DBBroker.getAgent().readSQL($"select * from nombretable where parametro1='{c.parametro1}';");
+
+            if (listaAux.Count == 0)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

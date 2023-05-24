@@ -60,3 +60,5 @@ C:\Users\leia\OneDrive\Documentos\GitHub Local\DI_Lucas\Extraordinario2_Ejercici
 C:\Users\leia\OneDrive\Documentos\GitHub Local\DI_Lucas\Extraordinario2_Ejercicio1_DI_Lucas_Sanz\Extraordinario2_Ejercicio1_DI_Lucas_Sanz\obj\Debug\Extraordinario2_Ejercicio1_DI_Lucas_Sanz.csproj.CopyComplete
 C:\Users\leia\OneDrive\Documentos\GitHub Local\DI_Lucas\Extraordinario2_Ejercicio1_DI_Lucas_Sanz\Extraordinario2_Ejercicio1_DI_Lucas_Sanz\obj\Debug\Extraordinario2_Ejercicio1_DI_Lucas_Sanz.exe
 C:\Users\leia\OneDrive\Documentos\GitHub Local\DI_Lucas\Extraordinario2_Ejercicio1_DI_Lucas_Sanz\Extraordinario2_Ejercicio1_DI_Lucas_Sanz\obj\Debug\Extraordinario2_Ejercicio1_DI_Lucas_Sanz.pdb
+C:\Users\leia\OneDrive\Documentos\GitHub Local\DI_Lucas\Extraordinario2_Ejercicio1_DI_Lucas_Sanz\Extraordinario2_Ejercicio1_DI_Lucas_Sanz\obj\Debug\View\Modal.g.cs
+C:\Users\leia\OneDrive\Documentos\GitHub Local\DI_Lucas\Extraordinario2_Ejercicio1_DI_Lucas_Sanz\Extraordinario2_Ejercicio1_DI_Lucas_Sanz\obj\Debug\View\Modal.baml

@@ -149,10 +149,10 @@
             <Button x:Name="btn_descafeinado" Content="CAFE DESCAFEINADO" Grid.Row="0" Grid.Column="2" FontSize="24" FontWeight="Bold" Click="click_consumicion"/>
         </Grid>
         <Grid Margin="550,0,-200,0">
-            <DataGrid x:Name="dg_consumiciones" Margin="0,0,0,76" SelectionChanged="selected_consumicion">
+            <DataGrid x:Name="dg_consumiciones" Margin="0,0,0,76" SelectionChanged="selected_consumicion" MouseDoubleClick="doubleClick">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding nombre}" Header="Producto" Width="*"/>
-                    <DataGridTextColumn Binding="{Binding precio}" Header="Precio" Width="*"/>
+                    <DataGridTextColumn Binding="{Binding nombre}" Header="Producto" Width="*" IsReadOnly="False"/>
+                    <DataGridTextColumn Binding="{Binding precio}" Header="Precio" Width="*" IsReadOnly="False"/>
                 </DataGrid.Columns>
             </DataGrid>
             <Button x:Name="btn_eliminar" IsEnabled="False" Content="ELIMINAR" HorizontalAlignment="Center" Margin="0,458,0,0" VerticalAlignment="Top" Width="200" Height="40" FontWeight="Bold" Click="click_eliminar"/>

@@ -10,17 +10,38 @@
         <TabControl TabStripPlacement="Left">
             <TabItem Header="TabItem" Height="50">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid Name="dg_principal" Margin="0,0,416,0">
+                    <DataGrid Name="dg_principal" Margin="0,0,416,0" SelectionChanged="selected_dg">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="PARAM1" Width="*" Binding="{Binding param1}"/>
                             <DataGridTextColumn Header="PARAM2" Width="*" Binding="{Binding param2}"/>
                             <DataGridTextColumn Header="PARAM3" Width="*" Binding="{Binding param3}"/>
                         </DataGrid.Columns>
                     </DataGrid>
+                    <Button Name="btn_nuevo" Content="NUEVO" HorizontalAlignment="Left" Margin="406,300,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="33" Width="74" Click="click_nuevo"/>
+                    <Button Name="btn_modificar" Content="MODIFICAR" HorizontalAlignment="Left" Margin="509,300,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="33" Width="75" IsEnabled="false" Click="click_modificar"/>
+                    <Button Name="btn_eliminar" Content="ELIMINAR" HorizontalAlignment="Left" Margin="613,300,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="33" Width="74" IsEnabled="false" Click="click_eliminar"/>
+                    <Label Content="Campo1" HorizontalAlignment="Left" Margin="394,73,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Campo2" HorizontalAlignment="Left" Margin="394,126,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.193,0.156"/>
+                    <Label Content="Campo3" HorizontalAlignment="Left" Margin="394,188,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="txt_campo1" HorizontalAlignment="Left" Margin="486,77,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="txt_campo2" HorizontalAlignment="Left" Margin="486,130,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="txt_campo3" HorizontalAlignment="Left" Margin="486,192,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <Button Name="btn_informe" Content="INFORME" HorizontalAlignment="Left" Margin="509,365,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="33" Width="74" IsEnabled="false" Click="click_informe"/>
                 </Grid>
             </TabItem>
             <TabItem Header="TabItem" Height="50">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid Name="dg_secundario" Margin="369,0,0,10" SelectionChanged="selected_dg_secundario">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="PARAM1" Binding="{Binding parametro1}" Width="*"/>
+                            <DataGridTextColumn Header="PARAM2" Binding="{Binding parametro2}" Width="*"/>
+                            <DataGridTextColumn Header="PARAM3" Binding="{Binding parametro3}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Name="btn_nuevo_modal" Content="NUEVO" HorizontalAlignment="Left" Margin="163,109,0,0" VerticalAlignment="Top" FontWeight="Bold" Click="click_nuevo_modal"/>
+                    <Button Name="btn_modificar_modal" Content="MODIFICAR" HorizontalAlignment="Left" Margin="151,189,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Button Name="btn_eliminar_modal" Content="ELIMINAR" HorizontalAlignment="Left" Margin="156,273,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                </Grid>
             </TabItem>
         </TabControl>
 
