@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ejercicio2_Recuperacion_Lucas_Sanz"
         mc:Ignorable="d"
-        Title="MainWindow" Height="524" Width="950" ResizeMode="NoResize">
+        Title="GESTOR PRODUCTOS" Height="524" Width="950" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="16*"/>
@@ -23,11 +23,11 @@
             <TextBox x:Name="txt_precio" HorizontalAlignment="Left" Margin="114,225,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229"/>
             <TextBox x:Name="txt_observaciones" HorizontalAlignment="Left" Margin="114,275,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229" Height="111"/>
             <Button Name="btn_añadir" Content="Añadir" HorizontalAlignment="Left" Margin="74,426,0,0" VerticalAlignment="Top" Click="click_añadir"/>
-            <Button Name="btn_modificar" Content="Modificar" HorizontalAlignment="Left" Margin="184,426,0,0" VerticalAlignment="Top" Click="click_modificar"/>
-            <Button Name="btn_eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="303,426,0,0" VerticalAlignment="Top" Click="click_eliminar"/>
+            <Button Name="btn_modificar" Content="Modificar" HorizontalAlignment="Left" Margin="184,426,0,0" VerticalAlignment="Top" Click="click_modificar" IsEnabled="false"/>
+            <Button Name="btn_eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="303,426,0,0" VerticalAlignment="Top" Click="click_eliminar" IsEnabled="false"/>
         </Grid>
         <StackPanel Margin="366,0,0,0" Grid.Column="1">
-            <DataGrid x:Name="dg_productos" Width="486" Height="508">
+            <DataGrid x:Name="dg_productos" Width="486" Height="508" SelectionChanged="selected_dg">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Código" Binding="{Binding codigo}" Width="*"/>
                     <DataGridTextColumn Header="Descripción" Binding="{Binding descripcion}" Width="*"/>

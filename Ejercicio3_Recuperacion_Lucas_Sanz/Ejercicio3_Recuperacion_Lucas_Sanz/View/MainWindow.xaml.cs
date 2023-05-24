@@ -31,6 +31,7 @@ namespace Ejercicio3_Recuperacion_Lucas_Sanz
         public Boolean edadValida;
         public int precioActual;
         public ManagerSesion managerSAux;
+        public Dictionary<string, string> mesesDic;
 
         public MainWindow()
         {
@@ -44,6 +45,21 @@ namespace Ejercicio3_Recuperacion_Lucas_Sanz
             precioActual = 0;
 
             List<string> meses = new List<string>(){"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio","Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
+            mesesDic = new Dictionary<string, string>()
+            {
+                {"Enero","01"},
+                {"Febrero","02"},
+                {"Marzo","03"},
+                {"Abril","04"},
+                {"Mayo","05"},
+                {"Junio","06"},
+                {"Julio","07"},
+                {"Agosto","08"},
+                {"Septiembre","09"},
+                {"Octubre","10"},
+                {"Noviembre","11"},
+                {"Diciembre","12"}
+            };
             cb_mes.ItemsSource = meses;
             for (int i = 2000; i < 2031; i++)
             {
@@ -216,7 +232,21 @@ namespace Ejercicio3_Recuperacion_Lucas_Sanz
 
         private void click_recaudacion(object sender, RoutedEventArgs e)
         {
-            
+            txt_recaudacion.Clear();
+
+            if (cb_mes.SelectedIndex != -1 && cb_año.SelectedIndex != -1)
+            {
+                string año = cb_año.SelectedItem.ToString();
+                string mes = mesesDic[cb_mes.SelectedItem.ToString()];
+
+                int recaudacion = managerSAux.getRecaudacion(mes, año);
+                if (recaudacion == 0)
+                {
+                    txt_recaudacion.Text = "No existe sesión";
+                    return;
+                }
+                txt_recaudacion.Text = "Total recaudado: " + recaudacion;
+            }
         }
     }
 }

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetContratos" targetNamespace="http://tempuri.org/DataSetContratos.xsd" xmlns:mstns="http://tempuri.org/DataSetContratos.xsd" xmlns="http://tempuri.org/DataSetContratos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetContratos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSetContratos" msprop:Generator_DataSetName="DataSetContratos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Contrato" msprop:Generator_RowEvHandlerName="ContratoRowChangeEventHandler" msprop:Generator_RowDeletedName="ContratoRowDeleted" msprop:Generator_RowDeletingName="ContratoRowDeleting" msprop:Generator_RowEvArgName="ContratoRowChangeEvent" msprop:Generator_TablePropName="Contrato" msprop:Generator_RowChangedName="ContratoRowChanged" msprop:Generator_RowChangingName="ContratoRowChanging" msprop:Generator_TableClassName="ContratoDataTable" msprop:Generator_RowClassName="ContratoRow" msprop:Generator_TableVarName="tableContrato" msprop:Generator_UserTableName="Contrato">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DNI" msprop:Generator_ColumnPropNameInRow="DNI" msprop:Generator_ColumnPropNameInTable="DNIColumn" msprop:Generator_ColumnVarNameInTable="columnDNI" msprop:Generator_UserColumnName="DNI" type="xs:string" minOccurs="0" />
+              <xs:element name="Codigo" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_UserColumnName="Codigo" type="xs:string" minOccurs="0" />
+              <xs:element name="Meses" msprop:Generator_ColumnPropNameInRow="Meses" msprop:Generator_ColumnPropNameInTable="MesesColumn" msprop:Generator_ColumnVarNameInTable="columnMeses" msprop:Generator_UserColumnName="Meses" type="xs:string" minOccurs="0" />
+              <xs:element name="Precio" msprop:Generator_ColumnPropNameInRow="Precio" msprop:Generator_ColumnPropNameInTable="PrecioColumn" msprop:Generator_ColumnVarNameInTable="columnPrecio" msprop:Generator_UserColumnName="Precio" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -40,8 +40,8 @@ namespace Ejercicio2_Recuperacion_Lucas_Sanz
             }
             string codigo = txt_codigo.Text;
             string descripcion = txt_descripcion.Text;
-            float coste = float.Parse(txt_coste.Text);
-            float precio = float.Parse(txt_precio.Text);
+            string coste = txt_coste.Text;
+            string precio = txt_precio.Text;
             string observaciones = txt_observaciones.Text;
 
             Producto p = new Producto(codigo, descripcion, coste, precio, observaciones);
@@ -56,8 +56,8 @@ namespace Ejercicio2_Recuperacion_Lucas_Sanz
             }
             string codigo = txt_codigo.Text;
             string descripcion = txt_descripcion.Text;
-            float coste = float.Parse(txt_coste.Text);
-            float precio = float.Parse(txt_precio.Text);
+            string coste = txt_coste.Text;
+            string precio = txt_precio.Text;
             string observaciones = txt_observaciones.Text;
 
             Producto p = new Producto(codigo, descripcion, coste, precio, observaciones);
@@ -106,6 +106,37 @@ namespace Ejercicio2_Recuperacion_Lucas_Sanz
             txt_coste.Clear();
             txt_precio.Clear();
             txt_observaciones.Clear();
+        }
+
+        private void selected_dg(object sender, SelectionChangedEventArgs e)
+        {
+            if (dg_productos.SelectedIndex != -1)
+            {
+                btn_eliminar.IsEnabled = true;
+                btn_modificar.IsEnabled = true;
+
+                Producto p = (Producto)dg_productos.SelectedItem;
+
+                txt_codigo.Text = p.codigo;
+                txt_descripcion.Text = p.descripcion;
+                txt_coste.Text = p.coste;
+                txt_precio.Text = p.precio;
+                txt_observaciones.Text = p.observaciones;
+            }
+            else
+            {
+                btn_eliminar.IsEnabled = false;
+                btn_modificar.IsEnabled = false;
+
+                txt_codigo.Clear();
+                txt_descripcion.Clear();
+                txt_coste.Clear();
+                txt_precio.Clear();
+                txt_observaciones.Clear();
+            }
+            
+
+
         }
     }
 }

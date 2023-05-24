@@ -1,0 +1,72 @@
+﻿<Window x:Class="GuardaMuebles_Lucas_Sanz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GuardaMuebles_Lucas_Sanz"
+        mc:Ignorable="d"
+        Title="GUARDAMUEBLES" Height="450" Width="914">
+    <Grid>
+        <TabControl TabStripPlacement="Left">
+            <TabItem Header="CONTRATACIONES" FontWeight="Bold" Height="50">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid Name="dg_contrataciones" Margin="428,0,41,0" SelectionChanged="selected_dg_contrataciones">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="DNI" Width="*" Binding="{Binding DNI}"/>
+                            <DataGridTextColumn Header="CODIGO" Width="*" Binding="{Binding codigo}"/>
+                            <DataGridTextColumn Header="MESES" Width="*" Binding="{Binding meses}"/>
+                            <DataGridTextColumn Header="PRECIO" Width="*" Binding="{Binding precioTotal}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Name="btn_añadir" Content="AÑADIR" HorizontalAlignment="Left" Margin="66,305,0,0" VerticalAlignment="Top" Width="75" Click="click_añadir_contratacion"/>
+                    <ComboBox Name="cb_clientes" HorizontalAlignment="Left" Margin="203,88,0,0" VerticalAlignment="Top" Width="120"/>
+                    <ComboBox Name="cb_guardamuebles" HorizontalAlignment="Left" Margin="203,152,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Clientes" HorizontalAlignment="Left" Margin="66,86,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Guardamuebles" HorizontalAlignment="Left" Margin="66,150,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Meses" HorizontalAlignment="Left" Margin="66,214,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="txt_meses" HorizontalAlignment="Left" Margin="203,218,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <Button Name="btn_quitar" Content="QUITAR" HorizontalAlignment="Left" Margin="159,305,0,0" VerticalAlignment="Top" Width="75" Click="click_quitar_cont" IsEnabled="False"/>
+                    <Button Name="btn_factura" Content="FACTURA" HorizontalAlignment="Left" Margin="248,305,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="click_factura"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="GUARDAMUEBLES" FontWeight="Bold" Height="50">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid Name="dg_guardamuebles" Margin="0,0,414,0" SelectionChanged="selected_dg_guardamueble">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="CODIGO" Binding="{Binding codigo}" Width="*"/>
+                            <DataGridTextColumn Header="TAMAÑO" Binding="{Binding tamaño}" Width="*"/>
+                            <DataGridTextColumn Header="PRECIO" Binding="{Binding precio}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Name="btn_nuevo_guardamuebles" Content="NUEVO" HorizontalAlignment="Left" Margin="420,330,0,0" VerticalAlignment="Top" Click="click_nuevo_guardamuebles"/>
+                    <Button Name="btn_modificar_guardamuebles" Content="MODIFICAR" HorizontalAlignment="Left" Margin="483,330,0,0" VerticalAlignment="Top" Click="click_modificar_guardamueble" IsEnabled="False"/>
+                    <Button Name="btn_eliminar_guardamuebles" Content="ELIMINAR" HorizontalAlignment="Left" Margin="568,330,0,0" VerticalAlignment="Top" Click="click_eliminar_guardamueble" IsEnabled="False"/>
+                    <TextBox Name="txt_codigo" HorizontalAlignment="Left" Margin="509,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="txt_tamaño" HorizontalAlignment="Left" Margin="509,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="txt_precio" HorizontalAlignment="Left" Margin="509,214,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Código" HorizontalAlignment="Left" Margin="420,77,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Tamaño" HorizontalAlignment="Left" Margin="420,142,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.077,0.103"/>
+                    <Label Content="Precio" HorizontalAlignment="Left" Margin="420,210,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.302,0.083"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="CLIENTES" FontWeight="Bold" Height="50">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid Name="dg_clientes" Margin="0,0,414,0" SelectionChanged="selected_dg_clientes">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="DNI" Binding="{Binding DNI}" Width="*"/>
+                            <DataGridTextColumn Header="NOMBRE" Binding="{Binding nombre}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Name="btn_nuevo_cliente" Content="NUEVO" HorizontalAlignment="Left" Margin="420,330,0,0" VerticalAlignment="Top" Click="click_nuevo_cliente"/>
+                    <Button Name="btn_modificar_cliente" Content="MODIFICAR" HorizontalAlignment="Left" Margin="483,330,0,0" VerticalAlignment="Top" Click="click_modificar_cliente" IsEnabled="False"/>
+                    <Button Name="btn_eliminar_cliente" Content="ELIMINAR" HorizontalAlignment="Left" Margin="568,330,0,0" VerticalAlignment="Top" Click="click_eliminar_cliente" IsEnabled="False"/>
+                    <TextBox Name="txt_dni" HorizontalAlignment="Left" Margin="509,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="txt_nombre" HorizontalAlignment="Left" Margin="509,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="DNI" HorizontalAlignment="Left" Margin="420,77,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Nombre" HorizontalAlignment="Left" Margin="420,142,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.077,0.103"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

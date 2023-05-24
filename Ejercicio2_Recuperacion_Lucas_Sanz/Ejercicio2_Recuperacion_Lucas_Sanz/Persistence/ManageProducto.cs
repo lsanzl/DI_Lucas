@@ -42,8 +42,8 @@ namespace Ejercicio2_Recuperacion_Lucas_Sanz.Persistence
 
             string codigo;
             string descripcion;
-            float coste;
-            float precio;
+            string coste;
+            string precio;
             string observaciones;
 
             listaObjetos = DBBroker.getAgent().readSQL("select * from ejerciciosrecuperacion.productos;");
@@ -52,8 +52,8 @@ namespace Ejercicio2_Recuperacion_Lucas_Sanz.Persistence
             {
                 codigo = item[1].ToString();
                 descripcion = item[2].ToString();
-                coste = float.Parse(item[3].ToString());
-                precio = float.Parse(item[4].ToString());
+                coste = item[3].ToString();
+                precio = item[4].ToString();
                 observaciones = item[5].ToString();
 
                 Producto p = new Producto(codigo, descripcion, coste, precio, observaciones);

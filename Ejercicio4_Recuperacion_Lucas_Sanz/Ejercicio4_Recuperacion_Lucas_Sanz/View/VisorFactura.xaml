@@ -1,0 +1,18 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio4_Recuperacion_Lucas_Sanz.View"
+        xmlns:Viewer="clr-namespace:SAPBusinessObjects.WPF.Viewer;assembly=SAPBusinessObjects.WPF.Viewer" x:Class="Ejercicio4_Recuperacion_Lucas_Sanz.View.VisorFactura"
+        mc:Ignorable="d"
+        Title="VisorFactura" Height="550" Width="550">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="791*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+
+        <Viewer:CrystalReportsViewer Name="factura_viewer" HorizontalAlignment="Left" VerticalAlignment="Center" Height="534" Width="550" Grid.ColumnSpan="2" Margin="0,0,0,0" ShowToolbar="False" ShowStatusbar="False" ShowGoToPageButton="False" ShowPrintButton="False"/>
+    </Grid>
+</Window>

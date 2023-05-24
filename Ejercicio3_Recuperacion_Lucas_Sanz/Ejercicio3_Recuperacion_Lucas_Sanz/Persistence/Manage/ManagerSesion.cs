@@ -39,7 +39,6 @@ namespace Ejercicio3_Recuperacion_Lucas_Sanz.Persistence.Manage
             }
             
         }
-
         public string getEdadMedia(string fecha, int sesion)
         {
             List<Object> listaEdadMedia = DBBroker.getAgent().readSQL($"select edad from ejerciciosrecuperacion.circo where fecha='{fecha}' and sesion='{sesion}';");
@@ -92,6 +91,29 @@ namespace Ejercicio3_Recuperacion_Lucas_Sanz.Persistence.Manage
                 }
             }
             return edades;
+        }
+        public int getRecaudacion(string mes, string año)
+        {
+            List<Object> objetos = DBBroker.getAgent().readSQL($"select fecha, totalRecaudado from ejerciciosrecuperacion.estadisticascirco");
+
+            string[] fechaSplit;
+            string fechaString;
+            DateTime fecha;
+            int recaudacionTotal = 0;
+
+            foreach(List<Object> obj in objetos)
+            {
+                fechaString = obj[0].ToString();
+                fecha = DateTime.Parse(fechaString);
+                fechaString = fecha.ToString("yyyy-MM-dd");
+                fechaSplit = fechaString.Split('-');
+
+                if (fechaSplit[0] == año && fechaSplit[1] == mes)
+                {
+                    recaudacionTotal += Convert.ToInt32(obj[1]);
+                }
+            }
+            return recaudacionTotal;
         }
     }
 }
