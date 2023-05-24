@@ -1,0 +1,28 @@
+﻿<Window x:Class="Extraordinario2_Ejercicio1_DI_Lucas_Sanz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Extraordinario2_Ejercicio1_DI_Lucas_Sanz"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl TabStripPlacement="Left">
+            <TabItem Header="TabItem" Height="50">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid Name="dg_principal" Margin="0,0,416,0">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="PARAM1" Width="*" Binding="{Binding param1}"/>
+                            <DataGridTextColumn Header="PARAM2" Width="*" Binding="{Binding param2}"/>
+                            <DataGridTextColumn Header="PARAM3" Width="*" Binding="{Binding param3}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="TabItem" Height="50">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
